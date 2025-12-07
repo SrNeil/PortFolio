@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,10 +21,13 @@ export default function ProjectsPage() {
                     {projects.map((project) => (
                         <Card key={project.slug} className="flex flex-col h-full hover:border-primary transition-colors">
                             <div className="h-48 bg-muted/50 w-full relative overflow-hidden group">
-                                {/* Placeholder for image */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-secondary/20 text-muted-foreground">
-                                    <span className="text-lg font-medium">Imagem do Projeto</span>
-                                </div>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-2xl">{project.title}</CardTitle>
