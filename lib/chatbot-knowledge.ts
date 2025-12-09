@@ -324,6 +324,14 @@ export const knowledgeBase: Record<string, ChatbotResponse> = {
         suggestions: ["Ver GitHub", "Como licenciar código?"]
     },
 
+    // Projects listing
+    projects: {
+        reply: "Tenho 4 projectos principais: SIGA (gestão académica), Sistema de Restaurantes (automação e pedidos), Business Platform (marketplace multi-lojas) e Gift Card Store (cartões presente digitais).",
+        type: "projects",
+        confidence: 1.0,
+        suggestions: ["O que é o SIGA?", "Sistema de Restaurantes", "Business Platform", "Gift Cards"]
+    },
+
     // Navigation & Site Info
     navigation: {
         reply: "Podes ver Projectos em /projects, Skills em /skills, Experiência em /experience, Serviços em /services e Contacto em /contact.",
@@ -336,6 +344,18 @@ export const knowledgeBase: Record<string, ChatbotResponse> = {
         type: "contact",
         confidence: 1.0,
         suggestions: ["Abrir formulário", "Ver GitHub", "Ver LinkedIn"]
+    },
+    contactForm: {
+        reply: "Para abrir o formulário de contacto, visita /contact. Lá podes enviar mensagem directa com os teus detalhes e necessidades.",
+        type: "contact:form",
+        confidence: 1.0,
+        suggestions: ["Como pedir orçamento?", "Que serviços ofereces?"]
+    },
+    orm: {
+        reply: "Sim, uso ORMs como Prisma (Node.js/TypeScript), TypeORM ou Sequelize, dependendo do projecto. Facilitam queries type-safe e migrations.",
+        type: "tech:orm",
+        confidence: 0.8,
+        suggestions: ["Que base de dados recomendas?", "Usas TypeScript?"]
     },
     site: {
         reply: "Este portfólio foi criado por Neil Michael usando Next.js, Tailwind CSS, Framer Motion e TypeScript. Mostra projectos, experiência e serviços.",
@@ -424,7 +444,7 @@ export function detectIntent(message: string): ChatbotResponse {
         return knowledgeBase.siga;
     }
 
-    if (/(funcionalidades do siga|features do siga|módulos do siga|modulos do siga|o que o siga faz)/i.test(lowercaseMsg)) {
+    if (/(funcionalidades.*siga|features.*siga|módulos.*siga|modulos.*siga|o que.*siga.*faz|quais.*funcionalidades.*siga)/i.test(lowercaseMsg)) {
         return knowledgeBase.sigaFeatures;
     }
 
@@ -590,8 +610,23 @@ export function detectIntent(message: string): ChatbotResponse {
         return knowledgeBase.opensource;
     }
 
+    // Projects listing
+    if (/(que projectos|quais projectos|projectos tens|teus projectos|mostrar projectos|ver projectos|lista.*projectos)/i.test(lowercaseMsg) && !/siga|restaurant|business|gift/.test(lowercaseMsg)) {
+        return knowledgeBase.projects;
+    }
+
+    // Contact form
+    if (/(abrir.*formulário|abrir.*formulario|preencher.*formulário|preencher.*formulario|aceder.*formulário|aceder.*formulario)/i.test(lowercaseMsg)) {
+        return knowledgeBase.contactForm;
+    }
+
+    // ORMs
+    if (/(orm|orms|prisma|typeorm|sequelize|eloquent)/i.test(lowercaseMsg)) {
+        return knowledgeBase.orm;
+    }
+
     // Contact
-    if (/(contacto|contato|contact|email|telefone|falar|conversar|linkedin)/i.test(lowercaseMsg)) {
+    if (/(contacto|contato|contact|email|telefone|falar|conversar|linkedin)/i.test(lowercaseMsg) && !/formulário|formulario|abrir|preencher/.test(lowercaseMsg)) {
         return knowledgeBase.contact;
     }
 

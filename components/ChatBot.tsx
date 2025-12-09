@@ -103,42 +103,24 @@ export default function ChatBot() {
 
     return (
         <>
-            {/* Floating Button */}
-            <motion.button
-                onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center group"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-            >
-                <AnimatePresence mode="wait">
-                    {isOpen ? (
-                        <motion.div
-                            key="close"
-                            initial={{ rotate: -90, opacity: 0 }}
-                            animate={{ rotate: 0, opacity: 1 }}
-                            exit={{ rotate: 90, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <X className="w-6 h-6" />
-                        </motion.div>
-                    ) : (
-                        <motion.div
-                            key="open"
-                            initial={{ rotate: 90, opacity: 0 }}
-                            animate={{ rotate: 0, opacity: 1 }}
-                            exit={{ rotate: -90, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="relative"
-                        >
-                            <MessageCircle className="w-6 h-6" />
-                            <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </motion.button>
+            {/* Floating Button - Only show when chat is closed */}
+            {!isOpen && (
+                <motion.button
+                    onClick={() => setIsOpen(true)}
+                    className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center group"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+                >
+                    <div className="relative">
+                        <MessageCircle className="w-6 h-6" />
+                        <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                    </div>
+                </motion.button>
+            )}
 
             {/* Chat Window */}
             <AnimatePresence>
@@ -180,8 +162,8 @@ export default function ChatBot() {
                                     >
                                         <div
                                             className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.sender === 'user'
-                                                    ? 'bg-primary/20'
-                                                    : 'bg-muted'
+                                                ? 'bg-primary/20'
+                                                : 'bg-muted'
                                                 }`}
                                         >
                                             {message.sender === 'user' ? (
@@ -192,8 +174,8 @@ export default function ChatBot() {
                                         </div>
                                         <div
                                             className={`max-w-[70%] rounded-2xl px-4 py-2 ${message.sender === 'user'
-                                                    ? 'bg-primary text-primary-foreground'
-                                                    : 'bg-muted text-foreground'
+                                                ? 'bg-primary text-primary-foreground'
+                                                : 'bg-muted text-foreground'
                                                 }`}
                                         >
                                             <p className="text-sm">{message.text}</p>
