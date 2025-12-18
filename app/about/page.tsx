@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Rocket, Target, MapPin, GraduationCap, Calendar } from "lucide-react";
-import Image from "next/image";
+import { Brain, Rocket, Target, MapPin, GraduationCap, Calendar, User } from "lucide-react";
+
 
 export default function AboutPage() {
     const currentYear = new Date().getFullYear();
@@ -15,14 +15,8 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto">
                     <div className="grid md:grid-cols-[auto_1fr] gap-8 items-center">
                         <div className="relative">
-                            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl mx-auto">
-                                <Image
-                                    src="/neil-michael-profile.png"
-                                    alt="Neil Michael"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
+                            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl mx-auto bg-muted flex items-center justify-center">
+                                <User className="w-24 h-24 text-muted-foreground/50" />
                             </div>
                         </div>
                         <div className="space-y-4 text-center md:text-left">

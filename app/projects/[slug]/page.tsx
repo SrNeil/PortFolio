@@ -27,6 +27,41 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         notFound();
     }
 
+    if (project.isComingSoon) {
+        return (
+            <div className="flex flex-col min-h-[calc(100vh-4rem)] items-center justify-center p-8 text-center bg-gradient-to-b from-background to-muted/20">
+                <Section className="max-w-xl space-y-8 animate-in fade-in zoom-in duration-500">
+                    <div className="relative w-23 h-23 mx-auto mb-6">
+                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+                        <CheckCircle2 className="h-24 w-24 text-primary relative z-10 mx-auto" strokeWidth={1} />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+                            Em Desenvolvimento
+                        </div>
+                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+                            {project.title}
+                        </h1>
+                        <p className="text-xl text-muted-foreground leading-relaxed">
+                            Estou trabalhando nos detalhes deste projeto.
+                            <br />
+                            Em breve estará disponível com o estudo de caso completo.
+                        </p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Button variant="outline" size="lg" asChild className="rounded-full px-8 hover:bg-primary/5 border-primary/20">
+                            <Link href="/projects">
+                                <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Projetos
+                            </Link>
+                        </Button>
+                    </div>
+                </Section>
+            </div>
+        );
+    }
+
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">
             <Section className="space-y-8">

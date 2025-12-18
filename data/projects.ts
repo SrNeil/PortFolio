@@ -18,6 +18,7 @@ export interface Project {
     differentials?: string;
     projectStatus?: string;
     commercialGoal?: string;
+    isComingSoon?: boolean;
 }
 
 export const projects: Project[] = [
@@ -134,6 +135,7 @@ export const projects: Project[] = [
     {
         slug: "business-platform",
         title: "Plataforma de Negócios",
+        isComingSoon: true,
         summary: "Marketplace multi-lojas com gestão de produtos e integrações.",
         technologies: ["Vue.js", "Firebase", "Stripe API", "Node.js"],
         problem: "Pequenos negócios precisavam de uma presença online profissional sem o custo de um e-commerce dedicado.",
