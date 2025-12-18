@@ -1,29 +1,9 @@
 
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, Github, Send, Linkedin } from "lucide-react";
+import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-
-// Simple Input Component
-function SimpleInput({ className, ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
-    return (
-        <input
-            className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-            {...props}
-        />
-    );
-}
-
-// Simple Textarea Component
-function SimpleTextarea({ className, ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
-    return (
-        <textarea
-            className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-            {...props}
-        />
-    );
-}
+import { ContactForm } from "@/components/ContactForm";
 
 export default async function ContactPage() {
     const t = await getTranslations('Pages.Contact');
@@ -112,23 +92,7 @@ export default async function ContactPage() {
                                 <CardTitle>{t('form.title')}</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-4">
-                                    <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.name')}</label>
-                                        <SimpleInput id="name" placeholder={t('form.namePlaceholder')} />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.email')}</label>
-                                        <SimpleInput id="email" type="email" placeholder={t('form.emailPlaceholder')} />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.message')}</label>
-                                        <SimpleTextarea id="message" placeholder={t('form.messagePlaceholder')} className="min-h-[120px]" />
-                                    </div>
-                                    <Button className="w-full">
-                                        <Send className="mr-2 h-4 w-4" /> {t('form.submit')}
-                                    </Button>
-                                </form>
+                                <ContactForm />
                             </CardContent>
                         </Card>
                     </div>

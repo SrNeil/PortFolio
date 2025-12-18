@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface Message {
     id: string;
@@ -15,6 +15,7 @@ interface Message {
 
 export default function ChatBot() {
     const t = useTranslations('Components.ChatBot');
+    const locale = useLocale();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
@@ -67,7 +68,7 @@ export default function ChatBot() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message: messageText }),
+                body: JSON.stringify({ message: messageText, locale }),
             });
 
             const data = await response.json();

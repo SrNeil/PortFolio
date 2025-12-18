@@ -28,7 +28,30 @@
         "who": "Who is Neil Michael?",
         "siga": "What is SIGA?",
         "projects": "See projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "specializations": "Specializations",
+        "experience": "Experience",
+        "tech": "Tech Stack",
+        "volet": "Work at VOLET",
+        "contactButton": "Contact now",
+        "restaurant": "Restaurant System",
+        "business": "Business Platform",
+        "giftcard": "Gift Card Store"
+      },
+      "replies": {
+        "greeting": "Hello! I am the virtual assistant for Neil Michael's portfolio. How can I help you?",
+        "profile": "I am Neil Michael, a Fullstack software engineer focused on automation, chatbots, and web/mobile development.",
+        "specializations": "Specialized in Process Automation, Intelligent Chatbots, Business Management Systems, and Web/Mobile Development.",
+        "location": "I am based in Maputo, Mozambique. I work remotely with local and international clients.",
+        "age": "I am {age} years old and I am a finalist in Informatics and Telecommunications Engineering at the Higher Polytechnic Institute.",
+        "experience": "Experience at UCL (2018-2019), GreenPrint (2021-2022), Nidjula (2022), and VOLET (2022–Present). Currently also a freelance developer.",
+        "siga": "SIGA is an Integrated Academic Management System: student management, enrollment, grades, payments, reports, and portals for teachers and students.",
+        "restaurant": "Restaurant Automation System with order management, digital menu via QR Code, kitchen panel (KDS), and real-time inventory control.",
+        "business": "Business Platform is a multi-store marketplace with product management, integrated payments (Stripe), and automatic merchant onboarding.",
+        "giftcard": "Gift Card Store allows you to buy gift cards for various services with automatic digital delivery by email after payment confirmation.",
+        "projects": "I have 4 main projects: SIGA (academic management), Restaurant System (automation and orders), Business Platform (multi-store marketplace), and Gift Card Store (digital gift cards).",
+        "contact": "Contact me via the form at /contact, the email available on the site, or through GitHub @SrNeil.",
+        "fallback": "I don't have a specific answer for that in this simulated version. Try asking about my projects or experience."
       }
     }
   },
@@ -213,7 +236,10 @@
         "emailPlaceholder": "your@email.com",
         "message": "Message",
         "messagePlaceholder": "How can I help?",
-        "submit": "Send Message"
+        "submit": "Send Message",
+        "loading": "Sending...",
+        "success": "Message sent successfully! I will get back to you soon.",
+        "error": "An error occurred while sending the message. Please try again."
       }
     }
   },
@@ -243,20 +269,148 @@
   },
   "ProjectsData": {
     "restaurant-automation": {
-      "title": "Restaurante Management System (RMS)",
-      "summary": "Complete digital ecosystem for restaurants with omnichannel ordering (Table, Kiosk, Delivery), real-time KDS, and integrated financial management with M-Pesa/e-Mola."
+      "title": "Restaurant Management System (RMS)",
+      "summary": "Complete digital ecosystem for restaurants with omnichannel ordering (Table, Kiosk, Delivery), real-time KDS, and integrated financial management with M-Pesa/e-Mola.",
+      "problem": "Inefficiency in order flow, communication errors between service and kitchen, and complexity in financial reconciliation of multiple payment methods (M-Pesa, e-Mola, Cash) in Mozambican restaurants.",
+      "solution": "Developed a 'Mobile-First' Progressive Web App (PWA) that integrates the entire restaurant flow. Includes QR Code digital menu, self-service Kiosks, delivery management, and a real-time Kitchen Display System (KDS). The backend processes mobile payments automatically and generates detailed profitability reports.",
+      "challenges": "Ensuring real-time synchronization (milliseconds) between table orders and the kitchen display (KDS) using Socket.io, and implementing a failsafe financial architecture with ACID transactions in PostgreSQL for payment reconciliation.",
+      "results": "Drastic reduction in service time, elimination of order errors ('paper slips'), and total financial control with automatic cash reconciliation.",
+      "benefits": [
+        "Instant orders from table to kitchen (no manual note-taking)",
+        "KDS (Kitchen Display System) replacing printers and organizing production",
+        "Financial management with automatic M-Pesa/e-Mola reconciliation",
+        "Real-time stock updates and product availability",
+        "Net profitability and tax (VAT) reports"
+      ],
+      "targetAudience": "Medium to large restaurants, fast-food chains, and high-volume take-away/delivery establishments requiring rigorous control.",
+      "features": [
+        "Omnichannel Flow: Dine-in, Kiosk, Take-away, and Delivery in one place",
+        "KDS (Kitchen Display System): Real-time kitchen panel with sound alerts",
+        "Table Management: Occupancy status and orders per table",
+        "Digital Payments: Integration and reconciliation of mobile payments",
+        "Stock Control: Immediate availability management (86 items)",
+        "Printing Support: ESC/POS thermal printer ready architecture",
+        "RBAC Permissions: Admin, Manager, Waiter, Kitchen, Delivery",
+        "Advanced Reports: Sales by channel, top-selling dishes, financial performance"
+      ],
+      "techStackDetails": [
+        "Frontend: Next.js 14, TypeScript, Tailwind CSS, Recharts",
+        "Backend: Node.js, Express.js (Raw SQL queries for performance)",
+        "Database: PostgreSQL 15 (ACID Transactions)",
+        "Real-time: Socket.io (Bi-directional communication)",
+        "Security: JWT Auth, Bcrypt, Zod Validation, Helmet"
+      ],
+      "differentials": "Designed specifically for the Mozambican market with native payment integrations. Premium UX that departs from the 'corporate software' standard, offering a fluid and modern experience for staff and customers.",
+      "projectStatus": "Advanced Beta (Functional Demo). 50% of core features fully operational.",
+      "commercialGoal": "Modernize the restaurant industry in Mozambique, reducing operational costs and fraud through total digitalization of order and payment flows."
     },
     "siga": {
       "title": "SIGA – Integrated Academic Management System",
-      "summary": "Complete platform for universities and schools, integrating academic and financial management, and portals for teachers and students."
+      "summary": "Complete platform for universities and schools, integrating academic and financial management, and portals for teachers and students.",
+      "problem": "SIGA resolves disorganization and inefficiency in traditional academic management, eliminating data decentralization, error-prone manual handling of grades and payments, lack of transparency, and slow document issuance.",
+      "solution": "Created a centralized platform with Role-Based Access Control (RBAC). The system automates enrollments, payments with reconciliation, document issuance, and offers personalized dashboards. Features resilient operation (offline/online) and immediate visual feedback.",
+      "challenges": "Developing a complex system with multiple access permissions (RBAC) and ensuring the integrity of financial and academic data in a realistic simulated environment with MSW 2.0 and LocalStorage persistence.",
+      "results": "Robust system capable of managing the entire student lifecycle, from enrollment to graduation, with rigorous financial control.",
+      "benefits": [
+        "Detailed financial management with reconciliation",
+        "Dedicated portals for Students and Teachers",
+        "Automation of enrollments and grade submission",
+        "Offline/online operation with resilience"
+      ],
+      "targetAudience": "Universities, Higher Institutes, Technical Schools, and private educational institutions requiring integrated financial management.",
+      "features": [
+        "Student Management (Full registration, documents, history)",
+        "Enrollment Management (Course registration, prerequisite validation)",
+        "Payment Management (Fees, fines, bank reconciliation)",
+        "Receipt/Slip Generation (Automatic issuance of proofs)",
+        "Course and Class Management (Teacher allocation, schedules, rooms)",
+        "Student Portal (Access to grades, analytical plan, financial, schedules)",
+        "Teacher Portal (Class management, grade submission, rosters)",
+        "Grade Submission (Secure system with weight and date validation)",
+        "Academic Record (Detailed analytical plan with GPA and credit calculation)",
+        "RBAC Permission System (Admin, Secretariat, Treasury, Coordination, Teacher, Student)",
+        "Financial Reports (Conciliation, debtors, revenue)",
+        "Dashboard with Statistics (Real-time KPIs per role)"
+      ],
+      "techStackDetails": [
+        "Front-end: Next.js 14 (App Router), React, TypeScript",
+        "Styling: Tailwind CSS, Shadcn/ui, Lucide React",
+        "State: React Context API, SWR (Data Fetching)",
+        "Back-end (Simulated): MSW 2.0 with LocalStorage persistence",
+        "Testing: Playwright (E2E Testing)",
+        "Others: Date-fns, Zod"
+      ],
+      "differentials": "Premium UX/UI with clean and modern design. Role-oriented architecture where each user sees only what they need. Immediate visual feedback with Toasts and Skeletons. Detailed financial management integrated with service blocking. Offline/online resilience.",
+      "projectStatus": "In Development / Functional Prototype. Frontend complete with simulated flows via MSW.",
+      "commercialGoal": "Demonstrate the ability to architect complex systems with multiple business rules and serve as a basis for an educational SaaS."
     },
     "business-platform": {
       "title": "Business Platform",
-      "summary": "Multi-store marketplace with product management and integrations."
+      "summary": "Multi-store marketplace with product management and integrations.",
+      "problem": "Small businesses needed a professional online presence without the cost of a dedicated e-commerce.",
+      "solution": "Developed a SaaS platform where merchants can create their virtual stores in minutes, manage catalogs, and receive integrated payments.",
+      "challenges": "Managing the global state of multiple stores and ensuring the security of Stripe transactions.",
+      "results": "Scalable platform with automatic onboarding of new merchants.",
+      "benefits": [
+        "Virtual stores ready in minutes",
+        "Centralized management of multiple businesses",
+        "Integration with local payment gateways",
+        "Complete administrative dashboard"
+      ],
+      "targetAudience": "Small and medium entrepreneurs, local merchants, and startups seeking to sell online easily.",
+      "features": [
+        "Intuitive catalog management",
+        "Automatic merchant onboarding",
+        "Integrated payments via Stripe",
+        "Administrative dashboard with KPIs",
+        "Multi-tenancy architecture",
+        "SEO optimized for each store"
+      ],
+      "techStackDetails": [
+        "Frontend: Nuxt.js / Vue.js",
+        "Styling: Tailwind CSS",
+        "Backend: Node.js / Express",
+        "Database: PostgreSQL",
+        "Payments: Stripe API"
+      ],
+      "differentials": "Extreme simplicity in store setup and low maintenance fees. Ideal for those who want to start selling online without technical complexity.",
+      "projectStatus": "Completed (Functional MVP)",
+      "commercialGoal": "Facilitate access to e-commerce in emerging markets through an accessible and scalable platform."
     },
     "gamenation": {
       "title": "GameNation",
-      "summary": "Platform for selling Gift Cards and digital services in Mozambique with payments via M-Pesa."
+      "summary": "Platform for selling Gift Cards and digital services in Mozambique with payments via M-Pesa.",
+      "problem": "Difficulty accessing global digital content (Steam, Netflix, Spotify) in Mozambique due to the lack of international credit cards and payment restrictions.",
+      "solution": "Developed a modern Web App (SPA) that allows the instant purchase of digital services using local payment methods (M-Pesa). The system delivers codes automatically via email and screen after payment confirmation.",
+      "challenges": "Implementing a 'Race-Condition-Free' code delivery system using ACID transactions in PostgreSQL to avoid duplicate sales and ensuring the security of digital code stock.",
+      "results": "Code Complete Platform (Advanced MVP) ready for production, with automated stock management and simplified purchase flow.",
+      "benefits": [
+        "Instant digital purchases without a credit card",
+        "Automatic code delivery 24/7",
+        "Local payments via M-Pesa (e-Mola placeholder integration)",
+        "Complete order history and code recovery"
+      ],
+      "targetAudience": "Gamers, streaming consumers, and mobile users in Mozambique who need access to international services.",
+      "features": [
+        "Multi-Category Catalog: Games, Streaming, Telecom, App Stores",
+        "Secure Checkout: Authentication via Supabase Auth and assisted payment flow",
+        "Automatic Delivery: Code release after payment confirmation",
+        "Admin Panel: Complete management of stock, sales, users, and finances",
+        "Security: Row Level Security (RLS) and payment validation",
+        "Gamer UI/UX: 'Dark Mode' design with fluid animations (Framer Motion)",
+        "Auditing: System logs for all critical operations",
+        "Notifications: Transactional emails via SendGrid and Telegram alerts"
+      ],
+      "techStackDetails": [
+        "Frontend: React 19, Vite, TailwindCSS, Radix UI",
+        "Backend: Supabase (PostgreSQL, Auth, Realtime)",
+        "Server-side: Deno Edge Functions (Webhook handling, critical logic)",
+        "Integrations: SendGrid (Email), Telegram API (Admin alerts)",
+        "State Management: React Context + Custom Hooks"
+      ],
+      "differentials": "Adapted to the Mozambican reality with international-level UX. Ensures the user never pays for an unavailable code thanks to rigorous transactional stock control.",
+      "projectStatus": "Code Complete (Advanced MVP). Ready to launch.",
+      "commercialGoal": "Democratize access to global digital products for the unbanked Mozambican public."
     }
   }
 }

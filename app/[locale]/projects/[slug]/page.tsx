@@ -38,7 +38,30 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
     const t = await getTranslations({ locale, namespace: 'Pages.ProjectDetail' });
     const tData = await getTranslations({ locale, namespace: 'ProjectsData' });
+
     const projectTitle = tData(`${project.slug}.title`);
+    const projectProblem = tData(`${project.slug}.problem`);
+    const projectSolution = tData(`${project.slug}.solution`);
+    const projectChallenges = tData(`${project.slug}.challenges`);
+    const projectResults = tData(`${project.slug}.results`);
+    const projectDifferentials = tData(`${project.slug}.differentials`);
+    const projectStatus = tData(`${project.slug}.projectStatus`);
+    const projectCommercialGoal = tData(`${project.slug}.commercialGoal`);
+    const projectTargetAudience = tData(`${project.slug}.targetAudience`);
+
+    // Helper for arrays
+    const getArray = (key: string) => {
+        try {
+            const val = tData.raw(`${project.slug}.${key}`);
+            return Array.isArray(val) ? val : [];
+        } catch {
+            return [];
+        }
+    };
+
+    const projectBenefits = getArray('benefits');
+    const projectFeatures = getArray('features');
+    const projectTechStackDetails = getArray('techStackDetails');
 
     if (project.isComingSoon) {
         return (
@@ -98,53 +121,55 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             <div>
                                 <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.problem')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    {project.problem}
+                                    {projectProblem}
                                 </p>
                             </div>
 
                             <div>
                                 <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.solution')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    {project.solution}
+                                    {projectSolution}
                                 </p>
                             </div>
 
-                            {project.challenges && (
+                            {projectChallenges && (
                                 <div>
                                     <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.challenges')}</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        {project.challenges}
+                                        {projectChallenges}
                                     </p>
                                 </div>
                             )}
                         </div>
 
-                        <div className="space-y-4 pt-4">
-                            <h3 className="text-xl font-semibold text-foreground">{t('labels.benefits')}</h3>
-                            <ul className="space-y-3">
-                                {project.benefits.map((benefit, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                                        <span className="text-muted-foreground">{benefit}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {projectBenefits.length > 0 && (
+                            <div className="space-y-4 pt-4">
+                                <h3 className="text-xl font-semibold text-foreground">{t('labels.benefits')}</h3>
+                                <ul className="space-y-3">
+                                    {projectBenefits.map((benefit, index) => (
+                                        <li key={index} className="flex items-start">
+                                            <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                                            <span className="text-muted-foreground">{benefit}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
-                        {project.targetAudience && (
+                        {projectTargetAudience && (
                             <div className="space-y-4 pt-4">
                                 <h3 className="text-xl font-semibold text-foreground">{t('labels.targetAudience')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    {project.targetAudience}
+                                    {projectTargetAudience}
                                 </p>
                             </div>
                         )}
 
-                        {project.features && project.features.length > 0 && (
+                        {projectFeatures && projectFeatures.length > 0 && (
                             <div className="space-y-4 pt-4">
                                 <h3 className="text-xl font-semibold text-foreground">{t('labels.features')}</h3>
                                 <ul className="space-y-2">
-                                    {project.features.map((feature, index) => (
+                                    {projectFeatures.map((feature, index) => (
                                         <li key={index} className="flex items-start">
                                             <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                                             <span className="text-muted-foreground text-sm">{feature}</span>
@@ -154,11 +179,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             </div>
                         )}
 
-                        {project.techStackDetails && project.techStackDetails.length > 0 && (
+                        {projectTechStackDetails && projectTechStackDetails.length > 0 && (
                             <div className="space-y-4 pt-4">
                                 <h3 className="text-xl font-semibold text-foreground">{t('labels.techStack')}</h3>
                                 <ul className="space-y-2">
-                                    {project.techStackDetails.map((detail, index) => (
+                                    {projectTechStackDetails.map((detail, index) => (
                                         <li key={index} className="text-muted-foreground text-sm">
                                             • {detail}
                                         </li>
@@ -167,30 +192,30 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             </div>
                         )}
 
-                        {project.differentials && (
+                        {projectDifferentials && (
                             <div className="space-y-4 pt-4">
                                 <h3 className="text-xl font-semibold text-foreground">{t('labels.differentials')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    {project.differentials}
+                                    {projectDifferentials}
                                 </p>
                             </div>
                         )}
 
-                        {(project.projectStatus || project.commercialGoal) && (
+                        {(projectStatus || projectCommercialGoal) && (
                             <div className="grid md:grid-cols-2 gap-4 pt-4">
-                                {project.projectStatus && (
+                                {projectStatus && (
                                     <div className="space-y-2 p-4 rounded-lg bg-card border border-border">
                                         <h4 className="text-sm font-semibold text-foreground">{t('labels.projectStatus')}</h4>
                                         <p className="text-muted-foreground text-sm leading-relaxed">
-                                            {project.projectStatus}
+                                            {projectStatus}
                                         </p>
                                     </div>
                                 )}
-                                {project.commercialGoal && (
+                                {projectCommercialGoal && (
                                     <div className="space-y-2 p-4 rounded-lg bg-card border border-border">
                                         <h4 className="text-sm font-semibold text-foreground">{t('labels.commercialGoal')}</h4>
                                         <p className="text-muted-foreground text-sm leading-relaxed">
-                                            {project.commercialGoal}
+                                            {projectCommercialGoal}
                                         </p>
                                     </div>
                                 )}
