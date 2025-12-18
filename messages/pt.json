@@ -17,6 +17,19 @@
     "ProjectGallery": {
       "title": "Galeria do Projeto",
       "imageCount": "Imagem {current} de {total}"
+    },
+    "ChatBot": {
+      "title": "Assistente Virtual",
+      "subtitle": "Neil Michael Portfolio",
+      "welcome": "Olá! Sou o assistente virtual do portfólio do Neil Michael. Como posso ajudar?",
+      "placeholder": "Digite sua mensagem...",
+      "error": "Desculpe, ocorreu um erro. Por favor, tente novamente.",
+      "suggestions": {
+        "who": "Quem é o Neil Michael?",
+        "siga": "O que é o SIGA?",
+        "projects": "Ver projectos",
+        "contact": "Contactar"
+      }
     }
   },
   "Hero": {

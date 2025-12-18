@@ -17,6 +17,19 @@
     "ProjectGallery": {
       "title": "Project Gallery",
       "imageCount": "Image {current} of {total}"
+    },
+    "ChatBot": {
+      "title": "Virtual Assistant",
+      "subtitle": "Neil Michael Portfolio",
+      "welcome": "Hello! I am the virtual assistant for Neil Michael's portfolio. How can I help you?",
+      "placeholder": "Type your message...",
+      "error": "Sorry, an error occurred. Please try again.",
+      "suggestions": {
+        "who": "Who is Neil Michael?",
+        "siga": "What is SIGA?",
+        "projects": "See projects",
+        "contact": "Contact"
+      }
     }
   },
   "Hero": {

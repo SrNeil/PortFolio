@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { ArrowRight, Code, Bot, Zap, LayoutDashboard } from "lucide-react";
 import { DigitalTransformationCard } from "@/components/DigitalTransformationCard";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function Home() {
-  const tHero = useTranslations('Hero');
-  const tSocial = useTranslations('Social');
-  const tHighlights = useTranslations('Highlights');
-  const tWhyMe = useTranslations('WhyMe');
+export default async function Home() {
+  const tHero = await getTranslations('Hero');
+  const tSocial = await getTranslations('Social');
+  const tHighlights = await getTranslations('Highlights');
+  const tWhyMe = await getTranslations('WhyMe');
 
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">

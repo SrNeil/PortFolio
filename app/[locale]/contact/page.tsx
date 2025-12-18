@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Github, Send, Linkedin } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 // Simple Input Component
 function SimpleInput({ className, ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
@@ -25,8 +25,8 @@ function SimpleTextarea({ className, ...props }: React.TextareaHTMLAttributes<HT
     );
 }
 
-export default function ContactPage() {
-    const t = useTranslations('Pages.Contact');
+export default async function ContactPage() {
+    const t = await getTranslations('Pages.Contact');
 
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">

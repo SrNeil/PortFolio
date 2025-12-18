@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface Message {
     id: string;
@@ -13,19 +14,32 @@ interface Message {
 }
 
 export default function ChatBot() {
+    const t = useTranslations('Components.ChatBot');
     const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMessages] = useState<Message[]>([
-        {
-            id: '1',
-            text: 'Olá! Sou o assistente virtual do portfólio do Neil Michael. Como posso ajudar?',
-            sender: 'bot',
-            timestamp: new Date(),
-            suggestions: ["Quem é o Neil Michael?", "O que é o SIGA?", "Ver projectos", "Contactar"]
-        }
-    ]);
+    const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    // Initialize welcome message when translations are available
+    useEffect(() => {
+        if (messages.length === 0) {
+            setMessages([
+                {
+                    id: '1',
+                    text: t('welcome'),
+                    sender: 'bot',
+                    timestamp: new Date(),
+                    suggestions: [
+                        t('suggestions.who'),
+                        t('suggestions.siga'),
+                        t('suggestions.projects'),
+                        t('suggestions.contact')
+                    ]
+                }
+            ]);
+        }
+    }, [t, messages.length]);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -75,7 +89,7 @@ export default function ChatBot() {
             console.error('Error sending message:', error);
             const errorMessage: Message = {
                 id: (Date.now() + 1).toString(),
-                text: 'Desculpe, ocorreu um erro. Por favor, tente novamente.',
+                text: t('error'),
                 sender: 'bot',
                 timestamp: new Date()
             };
@@ -138,8 +152,8 @@ export default function ChatBot() {
                                 <Bot className="w-5 h-5 text-primary" />
                             </div>
                             <div className="flex-1">
-                                <h3 className="font-semibold text-sm">Assistente Virtual</h3>
-                                <p className="text-xs text-muted-foreground">Neil Michael Portfolio</p>
+                                <h3 className="font-semibold text-sm">{t('title')}</h3>
+                                <p className="text-xs text-muted-foreground">{t('subtitle')}</p>
                             </div>
                             <button
                                 onClick={() => setIsOpen(false)}
@@ -251,7 +265,7 @@ export default function ChatBot() {
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     onKeyPress={handleKeyPress}
-                                    placeholder="Digite sua mensagem..."
+                                    placeholder={t('placeholder')}
                                     className="flex-1 bg-muted rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                 />
                                 <button

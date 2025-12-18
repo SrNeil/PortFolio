@@ -5,11 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function ProjectsPage() {
-    const t = useTranslations('Pages.Projects');
-    const tData = useTranslations('ProjectsData');
+export default async function ProjectsPage() {
+    const t = await getTranslations('Pages.Projects');
+    const tData = await getTranslations('ProjectsData');
 
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">

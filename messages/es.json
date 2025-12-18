@@ -17,6 +17,19 @@
         "ProjectGallery": {
             "title": "Galería del Proyecto",
             "imageCount": "Imagen {current} de {total}"
+        },
+        "ChatBot": {
+            "title": "Asistente Virtual",
+            "subtitle": "Neil Michael Portfolio",
+            "welcome": "¡Hola! Soy el asistente virtual del portafolio de Neil Michael. ¿Cómo puedo ayudarte?",
+            "placeholder": "Escribe tu mensaje...",
+            "error": "Lo siento, ocurrió un error. Por favor, inténtalo de nuevo.",
+            "suggestions": {
+                "who": "¿Quién es Neil Michael?",
+                "siga": "¿Qué es el SIGA?",
+                "projects": "Ver proyectos",
+                "contact": "Contactar"
+            }
         }
     },
     "Hero": {
@@ -115,7 +128,7 @@
             "volet": {
                 "title": "Desarrollador Web y Móvil",
                 "desc": {
-                    "1": "Desarrollo de aplicaciones financieras utilizando NuxtJS, React Native e Flutter.",
+                    "1": "Desarrollo de aplicaciones financieras utilizando NuxtJS, React Native y Flutter.",
                     "2": "Participación en el proyecto Sandbox del Banco de Mozambique (Innovación Fintech).",
                     "3": "Implementación de arquitectura escalable para alto volumen de transacciones."
                 }

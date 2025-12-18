@@ -1,10 +1,10 @@
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Rocket, Target, MapPin, GraduationCap, Calendar, User } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function AboutPage() {
-    const t = useTranslations('About');
+export default async function AboutPage() {
+    const t = await getTranslations('About');
     const currentYear = new Date().getFullYear();
     const birthYear = 2003;
     const age = currentYear - birthYear;
