@@ -48,7 +48,9 @@ export function ContactForm() {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to send message');
+                const errorData = await response.json().catch(() => ({}));
+                console.error('Server error details:', errorData);
+                throw new Error(errorData.error || 'Failed to send message');
             }
 
             setStatus('success');
