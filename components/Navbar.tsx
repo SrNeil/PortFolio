@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +46,7 @@ export function Navbar() {
                         </div>
                     </div>
                     <div className="hidden md:flex items-center space-x-2">
+                        <ThemeToggle />
                         <LanguageSwitcher />
                         <Button variant="ghost" size="icon" asChild>
                             <Link href="https://github.com/SrNeil" target="_blank">
@@ -58,6 +60,7 @@ export function Navbar() {
                         </Button>
                     </div>
                     <div className="-mr-2 flex md:hidden space-x-2 items-center">
+                        <ThemeToggle />
                         <LanguageSwitcher />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
