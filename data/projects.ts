@@ -149,20 +149,59 @@ export const projects: Project[] = [
         image: "/images/business-mockup.jpg"
     },
     {
-        slug: "gift-card-store",
-        title: "Loja de Gift Cards",
-        summary: "E-commerce especializado na venda e gestão de cartões presente.",
-        technologies: ["Next.js", "Supabase", "Tailwind", "Stripe"],
-        problem: "Dificuldade em encontrar e comprar gift cards de diversos serviços em um único lugar com entrega digital imediata.",
-        solution: "Implementei um e-commerce focado em produtos digitais, com entrega automática de códigos via email após confirmação de pagamento e gestão de estoque de códigos.",
-        challenges: "Integração segura com provedores de gift cards e entrega via email confiável.",
-        results: "Aumento na conversão de vendas devido à entrega imediata.",
+        slug: "gamenation",
+        title: "GameNation",
+        summary: "Plataforma de venda de Gift Cards e serviços digitais em Moçambique com pagamentos via M-Pesa.",
+        technologies: ["React 19", "Vite", "TailwindCSS", "Supabase", "PostgreSQL", "Edge Functions", "Radix UI", "Framer Motion"],
+        problem: "Dificuldade de acesso a conteúdos digitais globais (Steam, Netflix, Spotify) em Moçambique devido à falta de cartões de crédito internacionais e restrições de pagamento.",
+        solution: "Desenvolvi uma Web App (SPA) moderna que permite a compra instantânea de serviços digitais usando métodos de pagamento locais (M-Pesa). O sistema entrega os códigos automaticamente via email e tela após a confirmação do pagamento.",
+        challenges: "Implementar um sistema de entrega de códigos 'Race-Condition-Free' usando transações ACID no PostgreSQL para evitar vendas duplicadas, e garantir a segurança do stock de códigos digitais.",
+        results: "Plataforma Code Complete (MVP Avançado) pronta para produção, com gestão de stock automatizada e fluxo de compras simplificado.",
         benefits: [
-            "Entrega imediata e automatizada",
-            "Segurança nas transações",
-            "Variedade de produtos em um só lugar",
-            "Histórico de compras e reenvio fácil"
+            "Compras digitais instantâneas sem cartão de crédito",
+            "Entrega de códigos automática 24/7",
+            "Pagamentos locais via M-Pesa (Integração e-Mola placeholder)",
+            "Histórico completo de pedidos e recuperação de códigos"
         ],
-        image: "/images/giftcard-mockup.jpg"
+        targetAudience: "Gamers, consumidores de streaming e usuários de mobile em Moçambique que necessitam de acesso a serviços internacionais.",
+        features: [
+            "Catálogo Multi-Categoria: Jogos, Streaming, Telecom, App Stores",
+            "Checkout Seguro: Autenticação via Supabase Auth e fluxo de pagamento assistido",
+            "Entrega Automática: Liberação de código após confirmação de pagamento",
+            "Painel Admin: Gestão completa de stock, vendas, usuários e finanças",
+            "Segurança: Row Level Security (RLS) e validação de pagamentos",
+            "UI/UX Gamer: Design 'Dark Mode' com animações fluídas (Framer Motion)",
+            "Auditoria: Logs de sistema para todas as operações críticas",
+            "Notificações: Emails transacionais via SendGrid e alertas Telegram"
+        ],
+        techStackDetails: [
+            "Frontend: React 19, Vite, TailwindCSS, Radix UI",
+            "Backend: Supabase (PostgreSQL, Auth, Realtime)",
+            "Server-side: Deno Edge Functions (Webhook handling, critical logic)",
+            "Integrations: SendGrid (Email), Telegram API (Admin alerts)",
+            "State Management: React Context + Custom Hooks"
+        ],
+        differentials: "Adaptado à realidade moçambicana com UX de nível internacional. Garante que o usuário nunca paga por um código indisponível graças a um controle de stock transacional rigoroso.",
+        projectStatus: "Code Complete (MVP Avançado). Pronto para lançar.",
+        commercialGoal: "Democratizar o acesso a produtos digitais globais para o público moçambicano desbancarizado.",
+        image: "/projects/gamenation/hero.png",
+        gallery: [
+            "/projects/gamenation/hero.png",
+            "/projects/gamenation/shop_catalog.png",
+            "/projects/gamenation/suggest_gift.png",
+            "/projects/gamenation/faq.png",
+            "/projects/gamenation/contact.png",
+            "/projects/gamenation/my_orders.png",
+            "/projects/gamenation/order_details.png",
+            "/projects/gamenation/view_codes.png",
+            "/projects/gamenation/admin_dashboard.png",
+            "/projects/gamenation/admin_orders.png",
+            "/projects/gamenation/admin_add_code.png",
+            "/projects/gamenation/admin_stock.png",
+            "/projects/gamenation/admin_users.png",
+            "/projects/gamenation/admin_finance.png",
+            "/projects/gamenation/admin_config.png",
+            "/projects/gamenation/chatbot.png"
+        ]
     }
 ];
