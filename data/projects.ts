@@ -23,20 +23,56 @@ export interface Project {
 export const projects: Project[] = [
     {
         slug: "restaurant-automation",
-        title: "Sistema de Automação para Restaurantes",
-        summary: "Gestão completa de pedidos, estoque e impressão automática.",
-        technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-        problem: "Restaurantes sofrem com erros em pedidos manuais, demora no atendimento e falta de controle de estoque em tempo real.",
-        solution: "Desenvolvi um sistema integrado com cardápio digital (QR Code), painel de cozinha (KDS) e gestão de estoque. O sistema envia pedidos diretamente para a cozinha e bar, com impressão automática.",
-        challenges: "Implementar a comunicação em tempo real via Socket.io em um ambiente instável de internet.",
-        results: "Redução de 30% no tempo de atendimento e eliminação quase total de erros de pedidos.",
+        title: "Restaurante Management System (RMS)",
+        summary: "Ecossistema digital completo para restaurantes com pedidos ominicanal (Mesa, Kiosk, Delivery), KDS em tempo real e gestão financeira integrada com M-Pesa/e-Mola.",
+        technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Socket.io", "Docker"],
+        problem: "Ineficiência no fluxo de pedidos, erros de comunicação entre atendimento e cozinha, e complexidade na reconciliação financeira de múltiplos métodos de pagamento (M-Pesa, e-Mola, Cash) em restaurantes moçambicanos.",
+        solution: "Desenvolvi um sistema Web Progressivo (PWA) 'Mobile-First' que integra todo o fluxo do restaurante. Inclui cardápio digital QR Code, Kiosks de autoatendimento, gestão de entregas e um Kitchen Display System (KDS) em tempo real. O backend processa pagamentos móveis automaticamente e gera relatórios de rentabilidade detalhados.",
+        challenges: "Garantir a sincronização em tempo real (milissegundos) entre o pedido na mesa e o ecrã da cozinha (KDS) usando Socket.io, e implementar uma arquitetura financeira a prova de falhas com transações ACID no PostgreSQL para reconciliação de pagamentos.",
+        results: "Redução drástica no tempo de atendimento, eliminação de erros de pedidos ('folhas de papel'), e controle financeiro total com reconciliação automática de caixas.",
         benefits: [
-            "Redução de 30% no tempo de atendimento",
-            "Eliminação de erros de anotação",
-            "Controle preciso de estoque",
-            "Relatórios de vendas em tempo real"
+            "Pedidos instantâneos da mesa para a cozinha (sem garçom anotando)",
+            "KDS (Ecrã de Cozinha) que substitui impressoras e organiza a produção",
+            "Gestão financeira com reconciliação automática de M-Pesa/e-Mola",
+            "Atualização de stock e disponibilidade de produtos em tempo real",
+            "Relatórios de rentabilidade líquida e impostos (IVA)"
         ],
-        image: "/images/restaurant-mockup.jpg"
+        targetAudience: "Restaurantes médios e grandes, Fast-food chains e estabelecimentos com alto volume de Take-away/Delivery que necessitam de controle rigoroso.",
+        features: [
+            "Fluxo Ominicanal: Dine-in, Kiosk, Take-away e Delivery num só lugar",
+            "KDS (Kitchen Display System): Painel de cozinha em tempo real com alertas sonoros",
+            "Gestão de Mesas: Status de ocupação e pedidos por mesa",
+            "Pagamentos Digitais: Integração e reconciliação de pagamentos móveis",
+            "Controle de Stock: Gestão de disponibilidade imediata (86 items)",
+            "Impressão: Suporte a impressoras térmicas (arquitetura pronta)",
+            "Permissões RBAC: Admin, Gerente, Garçom, Cozinha, Entregador",
+            "Relatórios Avançados: Vendas por canal, pratos mais vendidos, performance financeira"
+        ],
+        techStackDetails: [
+            "Frontend: Next.js 14, TypeScript, Tailwind CSS, Recharts",
+            "Backend: Node.js, Express.js (Raw SQL queries para performance)",
+            "Database: PostgreSQL 15 (Transações ACID)",
+            "Real-time: Socket.io (Bi-directional communication)",
+            "Security: JWT Auth, Bcrypt, Zod Validation, Helmet"
+        ],
+        differentials: "Desenhado especificamente para o mercado moçambicano com integrações nativas de pagamento. UX Premium que foge do padrão 'software corporativo', oferecendo uma experiência fluida e moderna para staff e clientes.",
+        projectStatus: "Beta Avançado (Demo Funcional). 50% das funcionalidades core totalmente operacionais.",
+        commercialGoal: "Modernizar a restauração em Moçambique, reduzindo custos operacionais e fraudes através da digitalização total do fluxo de pedidos e pagamentos.",
+        image: "/projects/restaurant-automation/hero.png",
+        gallery: [
+            "/projects/restaurant-automation/hero.png",
+            "/projects/restaurant-automation/client_menu_1.png",
+            "/projects/restaurant-automation/client_menu_2.png",
+            "/projects/restaurant-automation/kds_display.png",
+            "/projects/restaurant-automation/kds_kitchen.png",
+            "/projects/restaurant-automation/admin_dashboard_1.png",
+            "/projects/restaurant-automation/admin_dashboard_2.png",
+            "/projects/restaurant-automation/admin_finance.png",
+            "/projects/restaurant-automation/admin_users.png",
+            "/projects/restaurant-automation/admin_config.png",
+            "/projects/restaurant-automation/staff_pos.png",
+            "/projects/restaurant-automation/staff_reports.png"
+        ]
     },
     {
         slug: "siga",
