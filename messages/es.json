@@ -39,7 +39,7 @@
         "systemsDesc": "Soluciones robustas para la gestión empresarial."
     },
     "WhyMe": {
-        "title": "¿Qué puedo hacer por su negocio?",
+        "title": "¿Por qué elegirme?",
         "desc": "Combino conocimiento técnico con visión de negocios. No solo escribo código, sino que creo soluciones que resuelven problemas reales y generan retorno.",
         "points": {
             "1": "Enfoque en resultados y eficiencia",
@@ -115,7 +115,7 @@
             "volet": {
                 "title": "Desarrollador Web y Móvil",
                 "desc": {
-                    "1": "Desarrollo de aplicaciones financieras utilizando NuxtJS, React Native y Flutter.",
+                    "1": "Desarrollo de aplicaciones financieras utilizando NuxtJS, React Native e Flutter.",
                     "2": "Participación en el proyecto Sandbox del Banco de Mozambique (Innovación Fintech).",
                     "3": "Implementación de arquitectura escalable para alto volumen de transacciones."
                 }
@@ -152,6 +152,7 @@
         },
         "ProjectDetail": {
             "backToProjects": "Volver a Proyectos",
+            "mockupAlt": "Mockup del proyecto {title}",
             "status": {
                 "inDevelopment": "En Desarrollo",
                 "comingSoon": "Estoy trabajando en los detalles de este proyecto.\nPronto estará disponible con el estudio de caso completo."
@@ -234,7 +235,7 @@
         },
         "siga": {
             "title": "SIGA – Sistema Integrado de Gestión Académica",
-            "summary": "Plataforma completa para universidades y escolas, integrando gestión académica, financiera y portales para docentes y estudiantes."
+            "summary": "Plataforma completa para universidades y escuelas, integrando gestión académica, financiera y portales para docentes y estudiantes."
         },
         "business-platform": {
             "title": "Plataforma de Negocios",

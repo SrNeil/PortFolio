@@ -28,13 +28,17 @@ export function generateStaticParams() {
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     const { slug, locale } = await params;
+
+    // Defensive check for projects data
     const project = projects.find((p) => p.slug === slug);
-    const t = await getTranslations('Pages.ProjectDetail');
-    const tData = await getTranslations('ProjectsData');
 
     if (!project) {
         notFound();
     }
+
+    const t = await getTranslations({ locale, namespace: 'Pages.ProjectDetail' });
+    const tData = await getTranslations({ locale, namespace: 'ProjectsData' });
+    const projectTitle = tData(`${project.slug}.title`);
 
     if (project.isComingSoon) {
         return (
@@ -50,7 +54,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             {t('status.inDevelopment')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                            {tData(`${project.slug}.title`)}
+                            {projectTitle}
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed whitespace-pre-line">
                             {t('status.comingSoon')}
@@ -80,7 +84,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                 <div className="grid lg:grid-cols-2 gap-12">
                     <div className="space-y-6">
-                        <h1 className="text-4xl font-bold tracking-tight">{tData(`${project.slug}.title`)}</h1>
+                        <h1 className="text-4xl font-bold tracking-tight">{projectTitle}</h1>
 
                         <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech) => (
@@ -198,7 +202,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         <div className="relative aspect-video bg-muted rounded-xl border border-border overflow-hidden group shadow-lg">
                             <Image
                                 src={project.image}
-                                alt={`Mockup do projeto ${tData(`${project.slug}.title`)}`}
+                                alt={t('mockupAlt', { title: projectTitle })}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -207,7 +211,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         </div>
 
                         {project.gallery && project.gallery.length > 0 && (
-                            <ProjectGallery images={project.gallery} title={tData(`${project.slug}.title`)} />
+                            <ProjectGallery images={project.gallery} title={projectTitle} />
                         )}
 
                         <div className="flex gap-4">

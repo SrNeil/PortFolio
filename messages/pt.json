@@ -152,6 +152,7 @@
     },
     "ProjectDetail": {
       "backToProjects": "Voltar para Projetos",
+      "mockupAlt": "Mockup do projeto {title}",
       "status": {
         "inDevelopment": "Em Desenvolvimento",
         "comingSoon": "Estou trabalhando nos detalhes deste projeto.\nEm breve estará disponível com o estudo de caso completo."

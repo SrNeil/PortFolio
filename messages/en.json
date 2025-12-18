@@ -152,6 +152,7 @@
     },
     "ProjectDetail": {
       "backToProjects": "Back to Projects",
+      "mockupAlt": "Project mockup {title}",
       "status": {
         "inDevelopment": "In Development",
         "comingSoon": "I am working on the details of this project.\nIt will be available soon with the complete case study."
