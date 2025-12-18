@@ -8,20 +8,26 @@ import { projects } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { getTranslations } from "next-intl/server";
 
+import { routing } from "@/i18n/routing";
+
 interface ProjectPageProps {
     params: Promise<{
         slug: string;
+        locale: string;
     }>;
 }
 
 export function generateStaticParams() {
-    return projects.map((project) => ({
-        slug: project.slug,
-    }));
+    return routing.locales.flatMap((locale) =>
+        projects.map((project) => ({
+            locale,
+            slug: project.slug,
+        }))
+    );
 }
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
-    const { slug } = await params;
+    const { slug, locale } = await params;
     const project = projects.find((p) => p.slug === slug);
     const t = await getTranslations('Pages.ProjectDetail');
     const tData = await getTranslations('ProjectsData');
