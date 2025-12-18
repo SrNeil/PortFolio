@@ -1,0 +1,94 @@
+{
+    "About": {
+        "title": "Sobre Mim",
+        "role": "Desenvolvedor de Software Fullstack",
+        "years": "{count} anos",
+        "location": "Maputo, Moçambique",
+        "education": {
+            "title": "Finalista em Engenharia Informática e de Telecomunicações",
+            "institution": "Instituto Superior Politécnico"
+        },
+        "description": {
+            "p1": "Sou um desenvolvedor de software apaixonado por criar tecnologia que eleva pessoas, melhora processos e impulsiona negócios através da automação. Natural de Maputo, Moçambique, atualmente estou finalizando o curso de Engenharia Informática e de Telecomunicações no Instituto Superior Politécnico.",
+            "p2": "Curioso por natureza, aprendo rápido e estou sempre estudando tecnologias novas para me tornar um desenvolvedor fullstack completo. Tenho experiência com desenvolvimento web, mobile, suporte técnico e soluções empresariais. Minha jornada inclui participação em projetos inovadores, como empresas na Sandbox do Banco de Moçambique, onde pude aplicar meus conhecimentos em um ambiente regulado e desafiador."
+        },
+        "cards": {
+            "philosophy": {
+                "title": "Filosofia",
+                "description": "Acredito que a tecnologia deve ser acessível e simplificar a vida. Programar é a arte de resolver problemas complexos da forma mais simples possível."
+            },
+            "focus": {
+                "title": "Foco",
+                "description": "Especializado em Automação, Chatbots e Sistemas de Gestão. Meu objetivo é transformar processos manuais em fluxos digitais eficientes."
+            },
+            "vision": {
+                "title": "Visão",
+                "description": "Impulsionar a transformação digital de empresas, criando ecossistemas conectados que geram valor real e crescimento sustentável."
+            }
+        }
+    },
+    "Skills": {
+        "title": "Minhas Skills",
+        "subtitle": "Tecnologias e ferramentas que domino",
+        "currentStack": {
+            "title": "Tech Stack Atual (Uso Diário)",
+            "core": "Core Stack",
+            "tools": "Ferramentas & Infra"
+        },
+        "general": {
+            "title": "Conhecimento Geral & Outras Tecnologias",
+            "frontend": "Front-end",
+            "backend": "Back-end",
+            "mobile": "Mobile",
+            "apis": "APIs & Integrações",
+            "extra": "Extra & Estudos",
+            "languages": "Idiomas"
+        }
+    },
+    "Experience": {
+        "title": "Minha Jornada",
+        "subtitle": "Experiência profissional e trajetória",
+        "items": {
+            "freelancer": {
+                "title": "Desenvolvedor Freelancer",
+                "company": "Autônomo",
+                "desc": {
+                    "1": "Sistemas customizados para empresas locais com foco em eficiência.",
+                    "2": "Desenvolvimento de Chatbots e automações (Telegram / WhatsApp) para atendimento.",
+                    "3": "Criação de soluções web e dashboards administrativos.",
+                    "4": "Foco em redução de processos manuais e aumento de conversão."
+                }
+            },
+            "volet": {
+                "title": "Desenvolvedor Web e Mobile",
+                "desc": {
+                    "1": "Desenvolvimento de aplicações financeiras utilizando NuxtJS, React Native e Flutter.",
+                    "2": "Participação em projeto Sandbox do Banco de Moçambique (Inovação Fintech).",
+                    "3": "Implementação de arquitetura escalável para alto volume de transações."
+                }
+            },
+            "nidjula": {
+                "title": "Suporte Informático + CCTV",
+                "desc": {
+                    "1": "Implementação de sistemas de segurança e monitoramento.",
+                    "2": "Desenvolvimento de ferramentas internas para gestão de chamados.",
+                    "3": "Otimização de infraestrutura de rede e suporte técnico."
+                }
+            },
+            "greenprint": {
+                "title": "Suporte Informático",
+                "desc": {
+                    "1": "Gestão de manutenção de hardware e software corporativo.",
+                    "2": "Implementação de políticas de segurança de dados."
+                }
+            },
+            "ucl": {
+                "title": "Suporte Técnico",
+                "desc": {
+                    "1": "Suporte técnico de nível 1 e 2 para infraestrutura crítica.",
+                    "2": "Manutenção preventiva de servidores e estações de trabalho."
+                }
+            }
+        }
+    }
+}

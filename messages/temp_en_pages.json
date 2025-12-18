@@ -1,0 +1,94 @@
+{
+    "About": {
+        "title": "About Me",
+        "role": "Fullstack Software Developer",
+        "years": "{count} years",
+        "location": "Maputo, Mozambique",
+        "education": {
+            "title": "Finalist in Computer and Telecommunications Engineering",
+            "institution": "Higher Polytechnic Institute"
+        },
+        "description": {
+            "p1": "I am a software developer passionate about creating technology that elevates people, improves processes, and drives business through automation. Born in Maputo, Mozambique, I am currently finishing my degree in Computer and Telecommunications Engineering at the Higher Polytechnic Institute.",
+            "p2": "Curious by nature, I learn quickly and am always studying new technologies to become a complete fullstack developer. I have experience with web and mobile development, technical support, and business solutions. My journey includes participation in innovative projects, such as companies in the Sandbox of the Bank of Mozambique, where I was able to apply my knowledge in a regulated and challenging environment."
+        },
+        "cards": {
+            "philosophy": {
+                "title": "Philosophy",
+                "description": "I believe technology should be accessible and simplify life. Programming is the art of solving complex problems in the simplest way possible."
+            },
+            "focus": {
+                "title": "Focus",
+                "description": "Specialized in Automation, Chatbots, and Management Systems. My goal is to transform manual processes into efficient digital flows."
+            },
+            "vision": {
+                "title": "Vision",
+                "description": "Driving digital transformation for companies, creating connected ecosystems that generate real value and sustainable growth."
+            }
+        }
+    },
+    "Skills": {
+        "title": "My Skills",
+        "subtitle": "Technologies and tools I master",
+        "currentStack": {
+            "title": "Current Tech Stack (Daily Use)",
+            "core": "Core Stack",
+            "tools": "Tools & Infra"
+        },
+        "general": {
+            "title": "General Knowledge & Other Technologies",
+            "frontend": "Front-end",
+            "backend": "Back-end",
+            "mobile": "Mobile",
+            "apis": "APIs & Integrations",
+            "extra": "Extra & Studies",
+            "languages": "Languages"
+        }
+    },
+    "Experience": {
+        "title": "My Journey",
+        "subtitle": "Professional experience and trajectory",
+        "items": {
+            "freelancer": {
+                "title": "Freelance Developer",
+                "company": "Self-employed",
+                "desc": {
+                    "1": "Custom systems for local businesses focused on efficiency.",
+                    "2": "Development of Chatbots and automations (Telegram / WhatsApp) for customer service.",
+                    "3": "Creation of web solutions and administrative dashboards.",
+                    "4": "Focus on reducing manual processes and increasing conversion."
+                }
+            },
+            "volet": {
+                "title": "Web and Mobile Developer",
+                "desc": {
+                    "1": "Development of financial applications using NuxtJS, React Native, and Flutter.",
+                    "2": "Participation in Bank of Mozambique Sandbox project (Fintech Innovation).",
+                    "3": "Implementation of scalable architecture for high transaction volume."
+                }
+            },
+            "nidjula": {
+                "title": "IT Support + CCTV",
+                "desc": {
+                    "1": "Implementation of security and monitoring systems.",
+                    "2": "Development of internal tools for ticket management.",
+                    "3": "Network infrastructure optimization and technical support."
+                }
+            },
+            "greenprint": {
+                "title": "IT Support",
+                "desc": {
+                    "1": "Corporate hardware and software maintenance management.",
+                    "2": "Implementation of data security policies."
+                }
+            },
+            "ucl": {
+                "title": "Technical Support",
+                "desc": {
+                    "1": "Level 1 and 2 technical support for critical infrastructure.",
+                    "2": "Preventive maintenance of servers and workstations."
+                }
+            }
+        }
+    }
+}

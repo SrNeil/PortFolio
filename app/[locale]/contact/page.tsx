@@ -1,8 +1,9 @@
-import Link from "next/link";
+
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Github, Send, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 // Simple Input Component
 function SimpleInput({ className, ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
@@ -25,13 +26,15 @@ function SimpleTextarea({ className, ...props }: React.TextareaHTMLAttributes<HT
 }
 
 export default function ContactPage() {
+    const t = useTranslations('Pages.Contact');
+
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">
             <Section className="space-y-8">
                 <div className="text-center space-y-4 mb-8">
-                    <h1 className="text-4xl font-bold tracking-tight">Vamos Conversar?</h1>
+                    <h1 className="text-4xl font-bold tracking-tight">{t('title')}</h1>
                     <p className="text-xl text-muted-foreground">
-                        Estou disponível para novos projetos e parcerias.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -39,7 +42,7 @@ export default function ContactPage() {
                     <div className="space-y-8">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Canais de Contato</CardTitle>
+                                <CardTitle>{t('channels.title')}</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <div className="p-4 bg-primary/5 rounded-lg border border-primary/10 mb-6">
@@ -48,7 +51,7 @@ export default function ContactPage() {
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                                         </span>
-                                        Disponível para freelas, projectos internacionais e posições remotas.
+                                        {t('channels.availability')}
                                     </p>
                                 </div>
 
@@ -57,7 +60,7 @@ export default function ContactPage() {
                                         <Mail className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-muted-foreground">Email</p>
+                                        <p className="text-sm font-medium text-muted-foreground">{t('channels.email')}</p>
                                         <a href="mailto:neilnisiofrancelinomichael@gmail.com" className="text-lg font-semibold hover:text-primary transition-colors">
                                             neilnisiofrancelinomichael@gmail.com
                                         </a>
@@ -69,7 +72,7 @@ export default function ContactPage() {
                                         <Phone className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-muted-foreground">WhatsApp / Telefone</p>
+                                        <p className="text-sm font-medium text-muted-foreground">{t('channels.phone')}</p>
                                         <a href="https://wa.me/258844298407" target="_blank" className="text-lg font-semibold hover:text-primary transition-colors">
                                             +258 84 429 8407
                                         </a>
@@ -81,7 +84,7 @@ export default function ContactPage() {
                                         <Github className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-muted-foreground">GitHub</p>
+                                        <p className="text-sm font-medium text-muted-foreground">{t('channels.github')}</p>
                                         <a href="https://github.com/SrNeil" target="_blank" className="text-lg font-semibold hover:text-primary transition-colors">
                                             github.com/SrNeil
                                         </a>
@@ -93,9 +96,9 @@ export default function ContactPage() {
                                         <Linkedin className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-muted-foreground">LinkedIn</p>
+                                        <p className="text-sm font-medium text-muted-foreground">{t('channels.linkedin')}</p>
                                         <a href="#" className="text-lg font-semibold hover:text-primary transition-colors">
-                                            Conectar no LinkedIn
+                                            {t('channels.connectLinkedin')}
                                         </a>
                                     </div>
                                 </div>
@@ -106,24 +109,24 @@ export default function ContactPage() {
                     <div className="space-y-8">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Envie uma mensagem</CardTitle>
+                                <CardTitle>{t('form.title')}</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <form className="space-y-4">
                                     <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Nome</label>
-                                        <SimpleInput id="name" placeholder="Seu nome" />
+                                        <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.name')}</label>
+                                        <SimpleInput id="name" placeholder={t('form.namePlaceholder')} />
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
-                                        <SimpleInput id="email" type="email" placeholder="seu@email.com" />
+                                        <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.email')}</label>
+                                        <SimpleInput id="email" type="email" placeholder={t('form.emailPlaceholder')} />
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Mensagem</label>
-                                        <SimpleTextarea id="message" placeholder="Como posso ajudar?" className="min-h-[120px]" />
+                                        <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{t('form.message')}</label>
+                                        <SimpleTextarea id="message" placeholder={t('form.messagePlaceholder')} className="min-h-[120px]" />
                                     </div>
                                     <Button className="w-full">
-                                        <Send className="mr-2 h-4 w-4" /> Enviar Mensagem
+                                        <Send className="mr-2 h-4 w-4" /> {t('form.submit')}
                                     </Button>
                                 </form>
                             </CardContent>

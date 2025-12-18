@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 // Let's create a simple inline Badge for now to avoid another file if possible, or just use standard Tailwind classes.
 function SkillBadge({ children }: { children: React.ReactNode }) {
@@ -20,13 +21,15 @@ const skills = {
 };
 
 export default function SkillsPage() {
+    const t = useTranslations('Skills');
+
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">
             <Section className="space-y-8">
                 <div className="text-center space-y-4">
-                    <h1 className="text-4xl font-bold tracking-tight">Minhas Skills</h1>
+                    <h1 className="text-4xl font-bold tracking-tight">{t('title')}</h1>
                     <p className="text-xl text-muted-foreground">
-                        Tecnologias e ferramentas que domino
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -34,12 +37,12 @@ export default function SkillsPage() {
                 <div className="mb-12">
                     <h2 className="text-2xl font-bold mb-6 flex items-center">
                         <span className="bg-primary h-8 w-1 mr-3 rounded-full"></span>
-                        Tech Stack Atual (Uso Diário)
+                        {t('currentStack.title')}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <Card className="border-primary/20 bg-primary/5">
                             <CardHeader>
-                                <CardTitle>Core Stack</CardTitle>
+                                <CardTitle>{t('currentStack.core')}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex flex-wrap gap-2">
                                 {["Next.js 14", "React", "TypeScript", "TailwindCSS", "Node.js", "PostgreSQL"].map((skill) => (
@@ -49,7 +52,7 @@ export default function SkillsPage() {
                         </Card>
                         <Card className="border-primary/20 bg-primary/5">
                             <CardHeader>
-                                <CardTitle>Ferramentas & Infra</CardTitle>
+                                <CardTitle>{t('currentStack.tools')}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex flex-wrap gap-2">
                                 {["Supabase", "Prisma", "Docker", "Git", "Vercel", "Figma"].map((skill) => (
@@ -62,12 +65,12 @@ export default function SkillsPage() {
 
                 <h2 className="text-2xl font-bold mb-6 flex items-center">
                     <span className="bg-muted h-8 w-1 mr-3 rounded-full"></span>
-                    Conhecimento Geral & Outras Tecnologias
+                    {t('general.title')}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Front-end</CardTitle>
+                            <CardTitle>{t('general.frontend')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {skills.frontend.map((skill) => (
@@ -78,7 +81,7 @@ export default function SkillsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Back-end</CardTitle>
+                            <CardTitle>{t('general.backend')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {skills.backend.map((skill) => (
@@ -89,7 +92,7 @@ export default function SkillsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Mobile</CardTitle>
+                            <CardTitle>{t('general.mobile')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {skills.mobile.map((skill) => (
@@ -100,7 +103,7 @@ export default function SkillsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>APIs & Integrações</CardTitle>
+                            <CardTitle>{t('general.apis')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {["Telegram Bot API", "WhatsApp Business API", "Stripe", "REST", "GraphQL"].map((skill) => (
@@ -111,7 +114,7 @@ export default function SkillsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Extra & Estudos</CardTitle>
+                            <CardTitle>{t('general.extra')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {skills.extra.map((skill) => (
@@ -122,7 +125,7 @@ export default function SkillsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Idiomas</CardTitle>
+                            <CardTitle>{t('general.languages')}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-2">
                             {skills.languages.map((skill) => (

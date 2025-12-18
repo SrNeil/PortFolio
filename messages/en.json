@@ -1,0 +1,244 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "contactButton": "Contact"
+  },
+  "Components": {
+    "DigitalTransformation": {
+      "title": "Digital Transformation",
+      "description": "Innovation that drives the future of your business."
+    }
+  },
+  "Hero": {
+    "title": "Transforming manual processes into automated and scalable digital solutions.",
+    "subtitle": "I build intelligent systems, chatbots, and automations that reduce costs and accelerate operations.",
+    "ctaPortfolio": "View Portfolio",
+    "ctaContact": "Talk to Me"
+  },
+  "Social": {
+    "title": "TECHNOLOGIES AND PLATFORMS I USE"
+  },
+  "Highlights": {
+    "fullstackTitle": "Fullstack Dev",
+    "fullstackDesc": "Complete and scalable web and mobile development.",
+    "chatbotsTitle": "Chatbots",
+    "chatbotsDesc": "Intelligent customer service and sales automation.",
+    "automationTitle": "Automation",
+    "automationDesc": "Process optimization and workflows.",
+    "systemsTitle": "Systems",
+    "systemsDesc": "Robust solutions for business management."
+  },
+  "WhyMe": {
+    "title": "What can I do for your business?",
+    "desc": "I combine technical knowledge with business vision. I don't just write code, I create solutions that solve real problems and bring good returns.",
+    "points": {
+      "1": "Focus on results and efficiency",
+      "2": "Clear and transparent communication",
+      "3": "Modern and performant technologies",
+      "4": "Continuous support and maintenance"
+    },
+    "cta": "Learn more about me"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  },
+  "About": {
+    "title": "About Me",
+    "role": "Fullstack Software Developer",
+    "years": "{count} years",
+    "location": "Maputo, Mozambique",
+    "education": {
+      "title": "Finalist in Computer and Telecommunications Engineering",
+      "institution": "Higher Polytechnic Institute"
+    },
+    "description": {
+      "p1": "I am a software developer passionate about creating technology that elevates people, improves processes, and drives business through automation. Born in Maputo, Mozambique, I am currently finishing my degree in Computer and Telecommunications Engineering at the Higher Polytechnic Institute.",
+      "p2": "Curious by nature, I learn quickly and am always studying new technologies to become a complete fullstack developer. I have experience with web and mobile development, technical support, and business solutions. My journey includes participation in innovative projects, such as companies in the Sandbox of the Bank of Mozambique, where I was able to apply my knowledge in a regulated and challenging environment."
+    },
+    "cards": {
+      "philosophy": {
+        "title": "Philosophy",
+        "description": "I believe technology should be accessible and simplify life. Programming is the art of solving complex problems in the simplest way possible."
+      },
+      "focus": {
+        "title": "Focus",
+        "description": "Specialized in Automation, Chatbots, and Management Systems. My goal is to transform manual processes into efficient digital flows."
+      },
+      "vision": {
+        "title": "Vision",
+        "description": "Driving digital transformation for companies, creating connected ecosystems that generate real value and sustainable growth."
+      }
+    }
+  },
+  "Skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies and tools I master",
+    "currentStack": {
+      "title": "Current Tech Stack (Daily Use)",
+      "core": "Core Stack",
+      "tools": "Tools & Infra"
+    },
+    "general": {
+      "title": "General Knowledge & Other Technologies",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "mobile": "Mobile",
+      "apis": "APIs & Integrations",
+      "extra": "Extra & Studies",
+      "languages": "Languages"
+    }
+  },
+  "Experience": {
+    "title": "My Journey",
+    "subtitle": "Professional experience and trajectory",
+    "items": {
+      "freelancer": {
+        "title": "Freelance Developer",
+        "company": "Self-employed",
+        "desc": {
+          "1": "Custom systems for local businesses focused on efficiency.",
+          "2": "Development of Chatbots and automations (Telegram / WhatsApp) for customer service.",
+          "3": "Creation of web solutions and administrative dashboards.",
+          "4": "Focus on reducing manual processes and increasing conversion."
+        }
+      },
+      "volet": {
+        "title": "Web and Mobile Developer",
+        "desc": {
+          "1": "Development of financial applications using NuxtJS, React Native, and Flutter.",
+          "2": "Participation in Bank of Mozambique Sandbox project (Fintech Innovation).",
+          "3": "Implementation of scalable architecture for high transaction volume."
+        }
+      },
+      "nidjula": {
+        "title": "IT Support + CCTV",
+        "desc": {
+          "1": "Implementation of security and monitoring systems.",
+          "2": "Development of internal tools for ticket management.",
+          "3": "Network infrastructure optimization and technical support."
+        }
+      },
+      "greenprint": {
+        "title": "IT Support",
+        "desc": {
+          "1": "Corporate hardware and software maintenance management.",
+          "2": "Implementation of data security policies."
+        }
+      },
+      "ucl": {
+        "title": "Technical Support",
+        "desc": {
+          "1": "Level 1 and 2 technical support for critical infrastructure.",
+          "2": "Preventive maintenance of servers and workstations."
+        }
+      }
+    }
+  },
+  "Pages": {
+    "Projects": {
+      "title": "Projects",
+      "subtitle": "Some of the work I have developed",
+      "viewDetails": "View Details"
+    },
+    "ProjectDetail": {
+      "backToProjects": "Back to Projects",
+      "status": {
+        "inDevelopment": "In Development",
+        "comingSoon": "I am working on the details of this project.\nIt will be available soon with the complete case study."
+      },
+      "labels": {
+        "problem": "The Problem",
+        "solution": "The Solution",
+        "challenges": "Challenges & Learnings",
+        "benefits": "Key Benefits",
+        "targetAudience": "Target Audience",
+        "features": "Key Features",
+        "techStack": "Detailed Tech Stack",
+        "differentials": "Differentials",
+        "projectStatus": "Project Status",
+        "commercialGoal": "Commercial Goal",
+        "results": "Results & Impact",
+        "similarProject": "Interested in a similar project?",
+        "similarProjectDesc": "I can adapt this solution to your business or create something entirely new.",
+        "requestQuote": "Request Quote",
+        "viewCode": "View Code",
+        "viewDemo": "View Demo"
+      }
+    },
+    "Services": {
+      "title": "Services",
+      "subtitle": "Technological solutions to boost your business"
+    },
+    "Contact": {
+      "title": "Let's Talk?",
+      "subtitle": "I am available for new projects and partnerships.",
+      "channels": {
+        "title": "Contact Channels",
+        "availability": "Available for freelance, international projects, and remote positions.",
+        "email": "Email",
+        "phone": "WhatsApp / Phone",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "connectLinkedin": "Connect on LinkedIn"
+      },
+      "form": {
+        "title": "Send a message",
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "your@email.com",
+        "message": "Message",
+        "messagePlaceholder": "How can I help?",
+        "submit": "Send Message"
+      }
+    }
+  },
+  "ServicesData": {
+    "items": {
+      "systems": {
+        "title": "Systems Development",
+        "description": "Robust and scalable web systems, tailored to your business needs. From CRMs to custom ERPs."
+      },
+      "chatbots": {
+        "title": "Chatbots and Automation",
+        "description": "Automatize customer service and repetitive processes with intelligent chatbots that work 24/7 on WhatsApp and Web."
+      },
+      "websites": {
+        "title": "Professional Websites",
+        "description": "Institutional sites, landing pages, and portfolios with modern design, high performance, and optimized for SEO."
+      },
+      "apps": {
+        "title": "Mobile Apps",
+        "description": "Native and hybrid apps for Android and iOS, focused on the best user experience (UX/UI)."
+      },
+      "consulting": {
+        "title": "Digital Consulting",
+        "description": "Analysis and strategy for the digital transformation of your company. I identify bottlenecks and propose technological solutions."
+      }
+    }
+  },
+  "ProjectsData": {
+    "restaurant-automation": {
+      "title": "Restaurante Management System (RMS)",
+      "summary": "Complete digital ecosystem for restaurants with omnichannel ordering (Table, Kiosk, Delivery), real-time KDS, and integrated financial management with M-Pesa/e-Mola."
+    },
+    "siga": {
+      "title": "SIGA – Integrated Academic Management System",
+      "summary": "Complete platform for universities and schools, integrating academic and financial management, and portals for teachers and students."
+    },
+    "business-platform": {
+      "title": "Business Platform",
+      "summary": "Multi-store marketplace with product management and integrations."
+    },
+    "gamenation": {
+      "title": "GameNation",
+      "summary": "Platform for selling Gift Cards and digital services in Mozambique with payments via M-Pesa."
+    }
+  }
+}

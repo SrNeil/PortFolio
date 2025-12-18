@@ -1,0 +1,78 @@
+{
+    "Pages": {
+        "Projects": {
+            "title": "Projetos",
+            "subtitle": "Alguns dos trabalhos que desenvolvi",
+            "viewDetails": "Ver Detalhes"
+        },
+        "Services": {
+            "title": "Serviços",
+            "subtitle": "Soluções tecnológicas para impulsionar seu negócio"
+        },
+        "Contact": {
+            "title": "Vamos Conversar?",
+            "subtitle": "Estou disponível para novos projetos e parcerias.",
+            "channels": {
+                "title": "Canais de Contato",
+                "availability": "Disponível para freelas, projectos internacionais e posições remotas.",
+                "email": "Email",
+                "phone": "WhatsApp / Telefone",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "connectLinkedin": "Conectar no LinkedIn"
+            },
+            "form": {
+                "title": "Envie uma mensagem",
+                "name": "Nome",
+                "namePlaceholder": "Seu nome",
+                "email": "Email",
+                "emailPlaceholder": "seu@email.com",
+                "message": "Mensagem",
+                "messagePlaceholder": "Como posso ajudar?",
+                "submit": "Enviar Mensagem"
+            }
+        }
+    },
+    "ServicesData": {
+        "items": {
+            "systems": {
+                "title": "Desenvolvimento de Sistemas",
+                "description": "Sistemas web robustos e escaláveis, feitos sob medida para as necessidades do seu negócio. Desde CRMs até ERPs personalizados."
+            },
+            "chatbots": {
+                "title": "Chatbots e Automação",
+                "description": "Automatize o atendimento ao cliente e processos repetitivos com chatbots inteligentes que funcionam 24/7 no WhatsApp e Web."
+            },
+            "websites": {
+                "title": "Websites Profissionais",
+                "description": "Sites institucionais, landing pages e portfólios com design moderno, alta performance e otimizados para SEO."
+            },
+            "apps": {
+                "title": "Apps Mobile",
+                "description": "Aplicativos nativos e híbridos para Android e iOS, focados na melhor experiência do usuário (UX/UI)."
+            },
+            "consulting": {
+                "title": "Consultoria Digital",
+                "description": "Análise e estratégia para a transformação digital da sua empresa. Identifico gargalos e proponho soluções tecnológicas."
+            }
+        }
+    },
+    "ProjectsData": {
+        "restaurant-automation": {
+            "title": "Restaurante Management System (RMS)",
+            "summary": "Ecossistema digital completo para restaurantes com pedidos ominicanal (Mesa, Kiosk, Delivery), KDS em tempo real e gestão financeira integrada com M-Pesa/e-Mola."
+        },
+        "siga": {
+            "title": "SIGA – Sistema Integrado de Gestão Académica",
+            "summary": "Plataforma completa para universidades e escolas, integrando gestão académica, financeira e portais para docentes e estudantes."
+        },
+        "business-platform": {
+            "title": "Plataforma de Negócios",
+            "summary": "Marketplace multi-lojas com gestão de produtos e integrações."
+        },
+        "gamenation": {
+            "title": "GameNation",
+            "summary": "Plataforma de venda de Gift Cards e serviços digitais em Moçambique com pagamentos via M-Pesa."
+        }
+    }
+}

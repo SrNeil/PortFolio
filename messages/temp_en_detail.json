@@ -1,0 +1,29 @@
+{
+    "Pages": {
+        "ProjectDetail": {
+            "backToProjects": "Back to Projects",
+            "status": {
+                "inDevelopment": "In Development",
+                "comingSoon": "I am working on the details of this project.\nIt will be available soon with the complete case study."
+            },
+            "labels": {
+                "problem": "The Problem",
+                "solution": "The Solution",
+                "challenges": "Challenges & Learnings",
+                "benefits": "Key Benefits",
+                "targetAudience": "Target Audience",
+                "features": "Key Features",
+                "techStack": "Detailed Tech Stack",
+                "differentials": "Differentials",
+                "projectStatus": "Project Status",
+                "commercialGoal": "Commercial Goal",
+                "results": "Results & Impact",
+                "similarProject": "Interested in a similar project?",
+                "similarProjectDesc": "I can adapt this solution to your business or create something entirely new.",
+                "requestQuote": "Request Quote",
+                "viewCode": "View Code",
+                "viewDemo": "View Demo"
+            }
+        }
+    }
+}

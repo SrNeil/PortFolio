@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from '@/i18n/routing';
 import Image from "next/image";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle2, Github, Globe } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { getTranslations } from "next-intl/server";
 
 interface ProjectPageProps {
     params: Promise<{
@@ -22,6 +23,8 @@ export function generateStaticParams() {
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     const { slug } = await params;
     const project = projects.find((p) => p.slug === slug);
+    const t = await getTranslations('Pages.ProjectDetail');
+    const tData = await getTranslations('ProjectsData');
 
     if (!project) {
         notFound();
@@ -38,22 +41,20 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                     <div className="space-y-4">
                         <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-                            Em Desenvolvimento
+                            {t('status.inDevelopment')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                            {project.title}
+                            {tData(`${project.slug}.title`)}
                         </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Estou trabalhando nos detalhes deste projeto.
-                            <br />
-                            Em breve estará disponível com o estudo de caso completo.
+                        <p className="text-xl text-muted-foreground leading-relaxed whitespace-pre-line">
+                            {t('status.comingSoon')}
                         </p>
                     </div>
 
                     <div className="pt-8">
                         <Button variant="outline" size="lg" asChild className="rounded-full px-8 hover:bg-primary/5 border-primary/20">
                             <Link href="/projects">
-                                <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Projetos
+                                <ArrowLeft className="mr-2 h-4 w-4" /> {t('backToProjects')}
                             </Link>
                         </Button>
                     </div>
@@ -67,13 +68,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <Section className="space-y-8">
                 <Button variant="ghost" asChild className="mb-8">
                     <Link href="/projects">
-                        <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Projetos
+                        <ArrowLeft className="mr-2 h-4 w-4" /> {t('backToProjects')}
                     </Link>
                 </Button>
 
                 <div className="grid lg:grid-cols-2 gap-12">
                     <div className="space-y-6">
-                        <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
+                        <h1 className="text-4xl font-bold tracking-tight">{tData(`${project.slug}.title`)}</h1>
 
                         <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech) => (
@@ -85,14 +86,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         <div className="prose prose-invert max-w-none space-y-6">
                             <div>
-                                <h3 className="text-xl font-semibold text-foreground mb-2">O Problema</h3>
+                                <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.problem')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     {project.problem}
                                 </p>
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-semibold text-foreground mb-2">A Solução</h3>
+                                <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.solution')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     {project.solution}
                                 </p>
@@ -100,7 +101,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                             {project.challenges && (
                                 <div>
-                                    <h3 className="text-xl font-semibold text-foreground mb-2">Desafios & Aprendizados</h3>
+                                    <h3 className="text-xl font-semibold text-foreground mb-2">{t('labels.challenges')}</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         {project.challenges}
                                     </p>
@@ -109,7 +110,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         </div>
 
                         <div className="space-y-4 pt-4">
-                            <h3 className="text-xl font-semibold text-foreground">Principais Benefícios</h3>
+                            <h3 className="text-xl font-semibold text-foreground">{t('labels.benefits')}</h3>
                             <ul className="space-y-3">
                                 {project.benefits.map((benefit, index) => (
                                     <li key={index} className="flex items-start">
@@ -122,7 +123,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         {project.targetAudience && (
                             <div className="space-y-4 pt-4">
-                                <h3 className="text-xl font-semibold text-foreground">Público-Alvo</h3>
+                                <h3 className="text-xl font-semibold text-foreground">{t('labels.targetAudience')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     {project.targetAudience}
                                 </p>
@@ -131,7 +132,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         {project.features && project.features.length > 0 && (
                             <div className="space-y-4 pt-4">
-                                <h3 className="text-xl font-semibold text-foreground">Principais Funcionalidades</h3>
+                                <h3 className="text-xl font-semibold text-foreground">{t('labels.features')}</h3>
                                 <ul className="space-y-2">
                                     {project.features.map((feature, index) => (
                                         <li key={index} className="flex items-start">
@@ -145,7 +146,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         {project.techStackDetails && project.techStackDetails.length > 0 && (
                             <div className="space-y-4 pt-4">
-                                <h3 className="text-xl font-semibold text-foreground">Stack Técnica Detalhada</h3>
+                                <h3 className="text-xl font-semibold text-foreground">{t('labels.techStack')}</h3>
                                 <ul className="space-y-2">
                                     {project.techStackDetails.map((detail, index) => (
                                         <li key={index} className="text-muted-foreground text-sm">
@@ -158,7 +159,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         {project.differentials && (
                             <div className="space-y-4 pt-4">
-                                <h3 className="text-xl font-semibold text-foreground">Diferenciais</h3>
+                                <h3 className="text-xl font-semibold text-foreground">{t('labels.differentials')}</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     {project.differentials}
                                 </p>
@@ -169,7 +170,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             <div className="grid md:grid-cols-2 gap-4 pt-4">
                                 {project.projectStatus && (
                                     <div className="space-y-2 p-4 rounded-lg bg-card border border-border">
-                                        <h4 className="text-sm font-semibold text-foreground">Estado do Projeto</h4>
+                                        <h4 className="text-sm font-semibold text-foreground">{t('labels.projectStatus')}</h4>
                                         <p className="text-muted-foreground text-sm leading-relaxed">
                                             {project.projectStatus}
                                         </p>
@@ -177,7 +178,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                                 )}
                                 {project.commercialGoal && (
                                     <div className="space-y-2 p-4 rounded-lg bg-card border border-border">
-                                        <h4 className="text-sm font-semibold text-foreground">Objetivo Comercial</h4>
+                                        <h4 className="text-sm font-semibold text-foreground">{t('labels.commercialGoal')}</h4>
                                         <p className="text-muted-foreground text-sm leading-relaxed">
                                             {project.commercialGoal}
                                         </p>
@@ -191,7 +192,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         <div className="relative aspect-video bg-muted rounded-xl border border-border overflow-hidden group shadow-lg">
                             <Image
                                 src={project.image}
-                                alt={`Mockup do projeto ${project.title}`}
+                                alt={`Mockup do projeto ${tData(`${project.slug}.title`)}`}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -200,21 +201,21 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         </div>
 
                         {project.gallery && project.gallery.length > 0 && (
-                            <ProjectGallery images={project.gallery} title={project.title} />
+                            <ProjectGallery images={project.gallery} title={tData(`${project.slug}.title`)} />
                         )}
 
                         <div className="flex gap-4">
                             {project.githubUrl && (
                                 <Button variant="outline" className="flex-1" asChild>
                                     <Link href={project.githubUrl} target="_blank">
-                                        <Github className="mr-2 h-4 w-4" /> Ver Código
+                                        <Github className="mr-2 h-4 w-4" /> {t('labels.viewCode')}
                                     </Link>
                                 </Button>
                             )}
                             {project.demoUrl && (
                                 <Button className="flex-1" asChild>
                                     <Link href={project.demoUrl} target="_blank">
-                                        <Globe className="mr-2 h-4 w-4" /> Ver Demo
+                                        <Globe className="mr-2 h-4 w-4" /> {t('labels.viewDemo')}
                                     </Link>
                                 </Button>
                             )}
@@ -222,7 +223,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                         {project.results && (
                             <div className="bg-card border border-border rounded-xl p-6 space-y-4">
-                                <h3 className="text-lg font-semibold">Resultados & Impacto</h3>
+                                <h3 className="text-lg font-semibold">{t('labels.results')}</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
                                     {project.results}
                                 </p>
@@ -230,12 +231,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         )}
 
                         <div className="bg-card border border-border rounded-xl p-6 space-y-4">
-                            <h3 className="text-lg font-semibold">Interessado em um projeto similar?</h3>
+                            <h3 className="text-lg font-semibold">{t('labels.similarProject')}</h3>
                             <p className="text-muted-foreground text-sm">
-                                Posso adaptar esta solução para o seu negócio ou criar algo totalmente novo.
+                                {t('labels.similarProjectDesc')}
                             </p>
                             <Button className="w-full" asChild>
-                                <Link href="/contact">Solicitar Orçamento</Link>
+                                <Link href="/contact">{t('labels.requestQuote')}</Link>
                             </Button>
                         </div>
                     </div>

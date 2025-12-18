@@ -1,0 +1,244 @@
+{
+    "Navbar": {
+        "home": "Inicio",
+        "about": "Sobre Mí",
+        "skills": "Habilidades",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "services": "Servicios",
+        "contact": "Contacto",
+        "contactButton": "Contactar"
+    },
+    "Components": {
+        "DigitalTransformation": {
+            "title": "Transformación Digital",
+            "description": "Innovación que impulsa el futuro de su negocio."
+        }
+    },
+    "Hero": {
+        "title": "Transformo procesos manuales en soluciones digitales automatizadas y escalables.",
+        "subtitle": "Construyo sistemas inteligentes, chatbots y automatizaciones que reducen costes y aceleran operaciones.",
+        "ctaPortfolio": "Ver Portafolio",
+        "ctaContact": "Hablar Conmigo"
+    },
+    "Social": {
+        "title": "TECNOLOGÍAS Y PLATAFORMAS QUE UTILIZO"
+    },
+    "Highlights": {
+        "fullstackTitle": "Dev Fullstack",
+        "fullstackDesc": "Desarrollo web y móvil completo y escalable.",
+        "chatbotsTitle": "Chatbots",
+        "chatbotsDesc": "Automatización de atención y ventas inteligentes.",
+        "automationTitle": "Automatización",
+        "automationDesc": "Optimización de procesos y flujos de trabajo.",
+        "systemsTitle": "Sistemas",
+        "systemsDesc": "Soluciones robustas para la gestión empresarial."
+    },
+    "WhyMe": {
+        "title": "¿Qué puedo hacer por su negocio?",
+        "desc": "Combino conocimiento técnico con visión de negocios. No solo escribo código, sino que creo soluciones que resuelven problemas reales y generan retorno.",
+        "points": {
+            "1": "Enfoque en resultados y eficiencia",
+            "2": "Comunicación clara y transparente",
+            "3": "Tecnologías modernas y de alto rendimiento",
+            "4": "Soporte y mantenimiento continuos"
+        },
+        "cta": "Saber más sobre mí"
+    },
+    "Footer": {
+        "rights": "Todos los derechos reservados."
+    },
+    "About": {
+        "title": "Sobre Mí",
+        "role": "Desarrollador de Software Fullstack",
+        "years": "{count} años",
+        "location": "Maputo, Mozambique",
+        "education": {
+            "title": "Finalista en Ingeniería Informática y de Telecomunicaciones",
+            "institution": "Instituto Superior Politécnico"
+        },
+        "description": {
+            "p1": "Soy un desarrollador de software apasionado por crear tecnología que eleva a las personas, mejora los procesos e impulsa los negocios a través de la automatización. Natural de Maputo, Mozambique, actualmente estoy finalizando la carrera de Ingeniería Informática y de Telecomunicaciones en el Instituto Superior Politécnico.",
+            "p2": "Curioso por naturaleza, aprendo rápido y siempre estoy estudiando nuevas tecnologías para convertirme en un desarrollador fullstack completo. Tengo experiencia en desarrollo web, móvil, soporte técnico y soluciones empresariales. Mi trayectoria incluye la participación en proyectos innovadores, como empresas en el Sandbox del Banco de Mozambique, donde pude aplicar mis conocimientos en un entorno regulado y desafiante."
+        },
+        "cards": {
+            "philosophy": {
+                "title": "Filosofía",
+                "description": "Creo que la tecnología debe ser accesible y simplificar la vida. Programar es el arte de resolver problemas complejos de la forma más sencilla posible."
+            },
+            "focus": {
+                "title": "Enfoque",
+                "description": "Especializado en Automatización, Chatbots y Sistemas de Gestión. Mi objetivo es transformar procesos manuales en flujos digitales eficientes."
+            },
+            "vision": {
+                "title": "Visión",
+                "description": "Impulsar la transformación digital de las empresas, creando ecosistemas conectados que generen valor real y crecimiento sostenible."
+            }
+        }
+    },
+    "Skills": {
+        "title": "Mis Habilidades",
+        "subtitle": "Tecnologías y herramientas que domino",
+        "currentStack": {
+            "title": "Tech Stack Actual (Uso Diario)",
+            "core": "Core Stack",
+            "tools": "Herramientas e Infra"
+        },
+        "general": {
+            "title": "Conocimiento General y Otras Tecnologías",
+            "frontend": "Front-end",
+            "backend": "Back-end",
+            "mobile": "Móvil",
+            "apis": "APIs e Integraciones",
+            "extra": "Extra y Estudios",
+            "languages": "Idiomas"
+        }
+    },
+    "Experience": {
+        "title": "Mi Trayectoria",
+        "subtitle": "Experiencia profesional y trayectoria",
+        "items": {
+            "freelancer": {
+                "title": "Desarrollador Freelance",
+                "company": "Autónomo",
+                "desc": {
+                    "1": "Sistemas personalizados para empresas locales con enfoque en la eficiencia.",
+                    "2": "Desarrollo de Chatbots y automatizaciones (Telegram / WhatsApp) para atención al cliente.",
+                    "3": "Creación de soluciones web y paneles administrativos.",
+                    "4": "Enfoque en la reducción de procesos manuales e incremento de conversión."
+                }
+            },
+            "volet": {
+                "title": "Desarrollador Web y Móvil",
+                "desc": {
+                    "1": "Desarrollo de aplicaciones financieras utilizando NuxtJS, React Native y Flutter.",
+                    "2": "Participación en el proyecto Sandbox del Banco de Mozambique (Innovación Fintech).",
+                    "3": "Implementación de arquitectura escalable para alto volumen de transacciones."
+                }
+            },
+            "nidjula": {
+                "title": "Soporte Informático + CCTV",
+                "desc": {
+                    "1": "Implementación de sistemas de seguridad y monitoreo.",
+                    "2": "Desarrollo de herramientas internas para la gestión de tickets.",
+                    "3": "Optimización de infraestructura de red y soporte técnico."
+                }
+            },
+            "greenprint": {
+                "title": "Soporte Informático",
+                "desc": {
+                    "1": "Gestión de mantenimiento de hardware y software corporativo.",
+                    "2": "Implementación de políticas de seguridad de datos."
+                }
+            },
+            "ucl": {
+                "title": "Soporte Técnico",
+                "desc": {
+                    "1": "Soporte técnico de nivel 1 y 2 para infraestructura crítica.",
+                    "2": "Mantenimiento preventivo de servidores y estaciones de trabajo."
+                }
+            }
+        }
+    },
+    "Pages": {
+        "Projects": {
+            "title": "Proyectos",
+            "subtitle": "Algunos de los trabajos que he desarrollado",
+            "viewDetails": "Ver Detalles"
+        },
+        "ProjectDetail": {
+            "backToProjects": "Volver a Proyectos",
+            "status": {
+                "inDevelopment": "En Desarrollo",
+                "comingSoon": "Estoy trabajando en los detalles de este proyecto.\nPronto estará disponible con el estudio de caso completo."
+            },
+            "labels": {
+                "problem": "El Problema",
+                "solution": "La Solución",
+                "challenges": "Desafíos y Aprendizajes",
+                "benefits": "Principales Beneficios",
+                "targetAudience": "Público Objetivo",
+                "features": "Principales Funcionalidades",
+                "techStack": "Stack Técnico Detallado",
+                "differentials": "Diferenciales",
+                "projectStatus": "Estado del Proyecto",
+                "commercialGoal": "Objetivo Comercial",
+                "results": "Resultados e Impacto",
+                "similarProject": "¿Interesado en un proyecto similar?",
+                "similarProjectDesc": "Puedo adaptar esta solución a su negocio o crear algo totalmente nuevo.",
+                "requestQuote": "Solicitar Presupuesto",
+                "viewCode": "Ver Código",
+                "viewDemo": "Ver Demo"
+            }
+        },
+        "Services": {
+            "title": "Servicios",
+            "subtitle": "Soluciones tecnológicas para impulsar su negocio"
+        },
+        "Contact": {
+            "title": "¿Hablamos?",
+            "subtitle": "Estoy disponible para nuevos proyectos y colaboraciones.",
+            "channels": {
+                "title": "Canales de Contacto",
+                "availability": "Disponible para freelance, proyectos internacionales y posiciones remotas.",
+                "email": "Correo Electrónico",
+                "phone": "WhatsApp / Teléfono",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "connectLinkedin": "Conectar en LinkedIn"
+            },
+            "form": {
+                "title": "Enviar un mensaje",
+                "name": "Nombre",
+                "namePlaceholder": "Su nombre",
+                "email": "Correo Electrónico",
+                "emailPlaceholder": "su@email.com",
+                "message": "Mensaje",
+                "messagePlaceholder": "¿Cómo puedo ayudar?",
+                "submit": "Enviar Mensaje"
+            }
+        }
+    },
+    "ServicesData": {
+        "items": {
+            "systems": {
+                "title": "Desarrollo de Sistemas",
+                "description": "Sistemas web robustos y escalables, hechos a medida para las necesidades de su negocio. Desde CRMs hasta ERPs personalizados."
+            },
+            "chatbots": {
+                "title": "Chatbots y Automatización",
+                "description": "Automatice la atención al cliente y procesos repetitivos con chatbots inteligentes que funcionan 24/7 en WhatsApp y Web."
+            },
+            "websites": {
+                "title": "Sitios Web Profesionales",
+                "description": "Sitios institucionales, landing pages y portafolios con diseño moderno, alto rendimiento y optimizados para SEO."
+            },
+            "apps": {
+                "title": "Apps Móviles",
+                "description": "Aplicaciones nativas e hibridas para Android e iOS, enfocadas en la mejor experiencia de usuario (UX/UI)."
+            },
+            "consulting": {
+                "title": "Consultoría Digital",
+                "description": "Análisis y estrategia para la transformación digital de su empresa. Identifico cuellos de botella y propongo soluciones tecnológicas."
+            }
+        }
+    },
+    "ProjectsData": {
+        "restaurant-automation": {
+            "title": "Sistema de Gestión de Restaurantes (RMS)",
+            "summary": "Ecosistema digital completo para restaurantes con pedidos omnicanal (Mesa, Quiosco, Delivery), KDS en tiempo real y gestión financiera integrada con M-Pesa/e-Mola."
+        },
+        "siga": {
+            "title": "SIGA – Sistema Integrado de Gestión Académica",
+            "summary": "Plataforma completa para universidades y escuelas, integrando gestión académica, financiera y portales para docentes y estudiantes."
+        },
+        "business-platform": {
+            "title": "Plataforma de Negocios",
+            "summary": "Marketplace multitienda con gestión de productos e integraciones."
+        },
+        "gamenation": {
+            "title": "GameNation",
+            "summary": "Plataforma de venta de Gift Cards y servicios digitales en Mozambique con pagos vía M-Pesa."
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "Pages": {
+        "ProjectDetail": {
+            "backToProjects": "Voltar para Projetos",
+            "status": {
+                "inDevelopment": "Em Desenvolvimento",
+                "comingSoon": "Estou trabalhando nos detalhes deste projeto.\nEm breve estará disponível com o estudo de caso completo."
+            },
+            "labels": {
+                "problem": "O Problema",
+                "solution": "A Solução",
+                "challenges": "Desafios & Aprendizados",
+                "benefits": "Principais Benefícios",
+                "targetAudience": "Público-Alvo",
+                "features": "Principais Funcionalidades",
+                "techStack": "Stack Técnica Detalhada",
+                "differentials": "Diferenciais",
+                "projectStatus": "Estado do Projeto",
+                "commercialGoal": "Objetivo Comercial",
+                "results": "Resultados & Impacto",
+                "similarProject": "Interessado em um projeto similar?",
+                "similarProjectDesc": "Posso adaptar esta solução para o seu negócio ou criar algo totalmente novo.",
+                "requestQuote": "Solicitar Orçamento",
+                "viewCode": "Ver Código",
+                "viewDemo": "Ver Demo"
+            }
+        }
+    }
+}

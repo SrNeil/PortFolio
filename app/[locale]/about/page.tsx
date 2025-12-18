@@ -1,9 +1,10 @@
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Rocket, Target, MapPin, GraduationCap, Calendar, User } from "lucide-react";
-
+import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
+    const t = useTranslations('About');
     const currentYear = new Date().getFullYear();
     const birthYear = 2003;
     const age = currentYear - birthYear;
@@ -22,23 +23,23 @@ export default function AboutPage() {
                         <div className="space-y-4 text-center md:text-left">
                             <h1 className="text-5xl font-bold tracking-tight">Neil Michael</h1>
                             <p className="text-2xl text-primary font-medium">
-                                Desenvolvedor de Software Fullstack
+                                {t('role')}
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start text-muted-foreground">
                                 <div className="flex items-center gap-2">
                                     <Calendar className="h-4 w-4" />
-                                    <span>{age} anos</span>
+                                    <span>{t('years', { count: age })}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <MapPin className="h-4 w-4" />
-                                    <span>Maputo, Moçambique</span>
+                                    <span>{t('location')}</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-2 p-4 bg-primary/10 rounded-lg border border-primary/20">
                                 <GraduationCap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                                 <div className="text-left">
-                                    <p className="font-semibold text-foreground">Finalista em Engenharia Informática e de Telecomunicações</p>
-                                    <p className="text-sm text-muted-foreground">Instituto Superior Politécnico</p>
+                                    <p className="font-semibold text-foreground">{t('education.title')}</p>
+                                    <p className="text-sm text-muted-foreground">{t('education.institution')}</p>
                                 </div>
                             </div>
                         </div>
@@ -48,13 +49,13 @@ export default function AboutPage() {
                 {/* About Text */}
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="space-y-6">
-                        <h2 className="text-3xl font-bold">Sobre Mim</h2>
+                        <h2 className="text-3xl font-bold">{t('title')}</h2>
                         <div className="prose prose-invert max-w-none">
                             <p className="text-lg leading-relaxed text-muted-foreground">
-                                Sou um desenvolvedor de software apaixonado por criar tecnologia que eleva pessoas, melhora processos e impulsiona negócios através da automação. Natural de Maputo, Moçambique, atualmente estou finalizando o curso de Engenharia Informática e de Telecomunicações no Instituto Superior Politécnico.
+                                {t('description.p1')}
                             </p>
                             <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-                                Curioso por natureza, aprendo rápido e estou sempre estudando tecnologias novas para me tornar um desenvolvedor fullstack completo. Tenho experiência com desenvolvimento web, mobile, suporte técnico e soluções empresariais. Minha jornada inclui participação em projetos inovadores, como empresas na Sandbox do Banco de Moçambique, onde pude aplicar meus conhecimentos em um ambiente regulado e desafiador.
+                                {t('description.p2')}
                             </p>
                         </div>
                     </div>
@@ -64,33 +65,33 @@ export default function AboutPage() {
                         <Card>
                             <CardHeader>
                                 <Brain className="h-8 w-8 text-primary mb-2" />
-                                <CardTitle>Filosofia</CardTitle>
+                                <CardTitle>{t('cards.philosophy.title')}</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm text-muted-foreground">
-                                    Acredito que a tecnologia deve ser acessível e simplificar a vida. Programar é a arte de resolver problemas complexos da forma mais simples possível.
+                                    {t('cards.philosophy.description')}
                                 </p>
                             </CardContent>
                         </Card>
                         <Card>
                             <CardHeader>
                                 <Target className="h-8 w-8 text-primary mb-2" />
-                                <CardTitle>Foco</CardTitle>
+                                <CardTitle>{t('cards.focus.title')}</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm text-muted-foreground">
-                                    Especializado em Automação, Chatbots e Sistemas de Gestão. Meu objetivo é transformar processos manuais em fluxos digitais eficientes.
+                                    {t('cards.focus.description')}
                                 </p>
                             </CardContent>
                         </Card>
                         <Card>
                             <CardHeader>
                                 <Rocket className="h-8 w-8 text-primary mb-2" />
-                                <CardTitle>Visão</CardTitle>
+                                <CardTitle>{t('cards.vision.title')}</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm text-muted-foreground">
-                                    Impulsionar a transformação digital de empresas, criando ecossistemas conectados que geram valor real e crescimento sustentável.
+                                    {t('cards.vision.description')}
                                 </p>
                             </CardContent>
                         </Card>

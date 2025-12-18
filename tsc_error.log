@@ -1,0 +1,4 @@
+﻿yarn run v1.22.22
+$ D:\Projects\PortFolio\node_modules\.bin\tsc --noEmit
+i18n/routing.ts(2,10): error TS2305: Module '"next-intl/navigation"' has no exported member 'createSharedPathnamesNavigation'.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

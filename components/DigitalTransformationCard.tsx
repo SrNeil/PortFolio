@@ -3,8 +3,10 @@
 import React, { useRef, useState } from "react";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import { Code, Cpu, Globe, Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function DigitalTransformationCard() {
+    const t = useTranslations('Components.DigitalTransformation');
     const ref = useRef<HTMLDivElement>(null);
 
     const x = useMotionValue(0);
@@ -60,10 +62,10 @@ export function DigitalTransformationCard() {
 
                 {/* Text */}
                 <h3 className="text-2xl font-bold text-white mb-2 tracking-tight group-hover:text-primary transition-colors duration-300">
-                    Transformação Digital
+                    {t('title')}
                 </h3>
                 <p className="text-neutral-400 text-sm max-w-[200px] text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    Inovação que impulsiona o futuro do seu negócio.
+                    {t('description')}
                 </p>
             </div>
 

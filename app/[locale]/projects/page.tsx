@@ -1,19 +1,23 @@
-import Link from "next/link";
+import { Link } from '@/i18n/routing';
 import Image from "next/image";
 import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import { useTranslations } from "next-intl";
 
 export default function ProjectsPage() {
+    const t = useTranslations('Pages.Projects');
+    const tData = useTranslations('ProjectsData');
+
     return (
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">
             <Section className="space-y-8">
                 <div className="text-center space-y-4 mb-12">
-                    <h1 className="text-4xl font-bold tracking-tight">Projetos</h1>
+                    <h1 className="text-4xl font-bold tracking-tight">{t('title')}</h1>
                     <p className="text-xl text-muted-foreground">
-                        Alguns dos trabalhos que desenvolvi
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -23,14 +27,14 @@ export default function ProjectsPage() {
                             <div className="h-48 bg-muted/50 w-full relative overflow-hidden group">
                                 <Image
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={tData(`${project.slug}.title`)}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
                             <CardHeader>
-                                <CardTitle className="text-2xl">{project.title}</CardTitle>
+                                <CardTitle className="text-2xl">{tData(`${project.slug}.title`)}</CardTitle>
                                 <div className="flex flex-wrap gap-2 mt-2">
                                     {project.technologies.map((tech) => (
                                         <span key={tech} className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
@@ -41,13 +45,13 @@ export default function ProjectsPage() {
                             </CardHeader>
                             <CardContent className="flex-1">
                                 <p className="text-muted-foreground line-clamp-3">
-                                    {project.summary}
+                                    {tData(`${project.slug}.summary`)}
                                 </p>
                             </CardContent>
                             <CardFooter>
                                 <Button asChild className="w-full">
                                     <Link href={`/projects/${project.slug}`}>
-                                        Ver Detalhes <ArrowRight className="ml-2 h-4 w-4" />
+                                        {t('viewDetails')} <ArrowRight className="ml-2 h-4 w-4" />
                                     </Link>
                                 </Button>
                             </CardFooter>

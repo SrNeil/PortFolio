@@ -1,0 +1,78 @@
+{
+    "Pages": {
+        "Projects": {
+            "title": "Projects",
+            "subtitle": "Some of the work I have developed",
+            "viewDetails": "View Details"
+        },
+        "Services": {
+            "title": "Services",
+            "subtitle": "Technological solutions to boost your business"
+        },
+        "Contact": {
+            "title": "Let's Talk?",
+            "subtitle": "I am available for new projects and partnerships.",
+            "channels": {
+                "title": "Contact Channels",
+                "availability": "Available for freelance, international projects, and remote positions.",
+                "email": "Email",
+                "phone": "WhatsApp / Phone",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "connectLinkedin": "Connect on LinkedIn"
+            },
+            "form": {
+                "title": "Send a message",
+                "name": "Name",
+                "namePlaceholder": "Your name",
+                "email": "Email",
+                "emailPlaceholder": "your@email.com",
+                "message": "Message",
+                "messagePlaceholder": "How can I help?",
+                "submit": "Send Message"
+            }
+        }
+    },
+    "ServicesData": {
+        "items": {
+            "systems": {
+                "title": "Systems Development",
+                "description": "Robust and scalable web systems, tailored to your business needs. From CRMs to custom ERPs."
+            },
+            "chatbots": {
+                "title": "Chatbots and Automation",
+                "description": "Automatize customer service and repetitive processes with intelligent chatbots that work 24/7 on WhatsApp and Web."
+            },
+            "websites": {
+                "title": "Professional Websites",
+                "description": "Institutional sites, landing pages, and portfolios with modern design, high performance, and optimized for SEO."
+            },
+            "apps": {
+                "title": "Mobile Apps",
+                "description": "Native and hybrid apps for Android and iOS, focused on the best user experience (UX/UI)."
+            },
+            "consulting": {
+                "title": "Digital Consulting",
+                "description": "Analysis and strategy for the digital transformation of your company. I identify bottlenecks and propose technological solutions."
+            }
+        }
+    },
+    "ProjectsData": {
+        "restaurant-automation": {
+            "title": "Restaurante Management System (RMS)",
+            "summary": "Complete digital ecosystem for restaurants with omnichannel ordering (Table, Kiosk, Delivery), real-time KDS, and integrated financial management with M-Pesa/e-Mola."
+        },
+        "siga": {
+            "title": "SIGA – Integrated Academic Management System",
+            "summary": "Complete platform for universities and schools, integrating academic and financial management, and portals for teachers and students."
+        },
+        "business-platform": {
+            "title": "Business Platform",
+            "summary": "Multi-store marketplace with product management and integrations."
+        },
+        "gamenation": {
+            "title": "GameNation",
+            "summary": "Platform for selling Gift Cards and digital services in Mozambique with payments via M-Pesa."
+        }
+    }
+}
