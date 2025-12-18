@@ -13,6 +13,10 @@
     "DigitalTransformation": {
       "title": "Digital Transformation",
       "description": "Innovation that drives the future of your business."
+    },
+    "ProjectGallery": {
+      "title": "Project Gallery",
+      "imageCount": "Image {current} of {total}"
     }
   },
   "Hero": {

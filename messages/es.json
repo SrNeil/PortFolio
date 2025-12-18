@@ -13,6 +13,10 @@
         "DigitalTransformation": {
             "title": "Transformación Digital",
             "description": "Innovación que impulsa el futuro de su negocio."
+        },
+        "ProjectGallery": {
+            "title": "Galería del Proyecto",
+            "imageCount": "Imagen {current} de {total}"
         }
     },
     "Hero": {
@@ -215,7 +219,7 @@
             },
             "apps": {
                 "title": "Apps Móviles",
-                "description": "Aplicaciones nativas e hibridas para Android e iOS, enfocadas en la mejor experiencia de usuario (UX/UI)."
+                "description": "Aplicaciones nativas e híbridas para Android e iOS, enfocadas en la mejor experiencia de usuario (UX/UI)."
             },
             "consulting": {
                 "title": "Consultoría Digital",
@@ -230,11 +234,11 @@
         },
         "siga": {
             "title": "SIGA – Sistema Integrado de Gestión Académica",
-            "summary": "Plataforma completa para universidades y escuelas, integrando gestión académica, financiera y portales para docentes y estudiantes."
+            "summary": "Plataforma completa para universidades y escolas, integrando gestión académica, financiera y portales para docentes y estudiantes."
         },
         "business-platform": {
             "title": "Plataforma de Negocios",
-            "summary": "Marketplace multitienda con gestión de productos e integraciones."
+            "summary": "Marketplace multi-tienda con gestión de productos e integraciones."
         },
         "gamenation": {
             "title": "GameNation",

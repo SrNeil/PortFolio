@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 interface ProjectGalleryProps {
     images: string[];
@@ -11,6 +12,7 @@ interface ProjectGalleryProps {
 }
 
 export function ProjectGallery({ images, title }: ProjectGalleryProps) {
+    const t = useTranslations('Components.ProjectGallery');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -69,7 +71,7 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
 
     return (
         <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground">Galeria do Projeto</h3>
+            <h3 className="text-xl font-semibold text-foreground">{t('title')}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {images.map((img, i) => (
                     <div
@@ -144,7 +146,7 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
                         </div>
 
                         <div className="absolute bottom-4 left-0 right-0 text-center text-white/50 text-sm">
-                            Imagem {currentIndex + 1} de {images.length}
+                            {t('imageCount', { current: currentIndex + 1, total: images.length })}
                         </div>
                     </div>
                 </div>

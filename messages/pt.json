@@ -13,6 +13,10 @@
     "DigitalTransformation": {
       "title": "Transformação Digital",
       "description": "Inovação que impulsiona o futuro do seu negócio."
+    },
+    "ProjectGallery": {
+      "title": "Galeria do Projeto",
+      "imageCount": "Imagem {current} de {total}"
     }
   },
   "Hero": {
