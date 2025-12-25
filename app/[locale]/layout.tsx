@@ -33,7 +33,7 @@ const jsonLd = {
   "knowsAbout": ["Fullstack Development", "Automation", "Chatbots", "Next.js", "React"],
   "sameAs": [
     "https://github.com/SrNeil",
-    "https://linkedin.com/in/neilmichael" // Placeholder
+    "https://linkedin.com/in/neil-michael-639b72231"
   ]
 };
 
@@ -56,7 +56,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

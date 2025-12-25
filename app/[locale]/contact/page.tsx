@@ -77,7 +77,7 @@ export default async function ContactPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm font-medium text-muted-foreground">{t('channels.linkedin')}</p>
-                                        <a href="#" className="text-lg font-semibold hover:text-primary transition-colors">
+                                        <a href="https://www.linkedin.com/in/neil-michael-639b72231" target="_blank" className="text-lg font-semibold hover:text-primary transition-colors">
                                             {t('channels.connectLinkedin')}
                                         </a>
                                     </div>

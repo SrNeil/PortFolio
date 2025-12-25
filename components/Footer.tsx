@@ -18,6 +18,9 @@ export function Footer() {
                         <Link href="https://github.com/SrNeil" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                             <Github className="h-5 w-5" />
                         </Link>
+                        <Link href="https://www.linkedin.com/in/neil-michael-639b72231" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+                            <Linkedin className="h-5 w-5" />
+                        </Link>
                         <Link href="mailto:neilnisiofrancelinomichael@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                             <Mail className="h-5 w-5" />
                         </Link>
