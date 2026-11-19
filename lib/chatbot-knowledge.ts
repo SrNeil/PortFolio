@@ -150,7 +150,7 @@ export function detectIntent(message: string): ChatbotResponse {
     }
 
     // 5. GENERAL PROJECTS LISTING
-    if (/(projectos|proyectos|projects|trabalhos|works|portfolio|portfólio|mostrar|show|lista)/i.test(lowercaseMsg)) {
+    if (/(projectos|projetos|proyectos|projects|trabalhos|works|portfolio|portfólio|mostrar|show|lista)/i.test(lowercaseMsg)) {
         return knowledgeBase.projects;
     }
 
